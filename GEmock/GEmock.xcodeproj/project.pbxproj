@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05560B161CB44A5400B6F8D0 /* CreateEvent.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05560B151CB44A5400B6F8D0 /* CreateEvent.storyboard */; };
 		F3CAD9E41CADDC420036B8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */; };
 		F3CAD9E61CADDC420036B8E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CAD9E51CADDC420036B8E9 /* ViewController.swift */; };
-		F3CAD9E91CADDC420036B8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CAD9E71CADDC420036B8E9 /* Main.storyboard */; };
+		F3CAD9E91CADDC420036B8E9 /* BadgeConfirmation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CAD9E71CADDC420036B8E9 /* BadgeConfirmation.storyboard */; };
 		F3CAD9EB1CADDC420036B8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */; };
 		F3CAD9EE1CADDC420036B8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CAD9EC1CADDC420036B8E9 /* LaunchScreen.storyboard */; };
 		F3CAD9F91CADDC420036B8E9 /* GEmockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CAD9F81CADDC420036B8E9 /* GEmockTests.swift */; };
@@ -34,10 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05560B151CB44A5400B6F8D0 /* CreateEvent.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CreateEvent.storyboard; sourceTree = "<group>"; };
 		F3CAD9E01CADDC420036B8E9 /* GEmock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEmock.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3CAD9E51CADDC420036B8E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F3CAD9E81CADDC420036B8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F3CAD9E81CADDC420036B8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/BadgeConfirmation.storyboard; sourceTree = "<group>"; };
 		F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3CAD9ED1CADDC420036B8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3CAD9EF1CADDC420036B8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,10 +101,11 @@
 			children = (
 				F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */,
 				F3CAD9E51CADDC420036B8E9 /* ViewController.swift */,
-				F3CAD9E71CADDC420036B8E9 /* Main.storyboard */,
+				F3CAD9E71CADDC420036B8E9 /* BadgeConfirmation.storyboard */,
 				F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */,
 				F3CAD9EC1CADDC420036B8E9 /* LaunchScreen.storyboard */,
 				F3CAD9EF1CADDC420036B8E9 /* Info.plist */,
+				05560B151CB44A5400B6F8D0 /* CreateEvent.storyboard */,
 			);
 			path = GEmock;
 			sourceTree = "<group>";
@@ -234,7 +237,8 @@
 			files = (
 				F3CAD9EE1CADDC420036B8E9 /* LaunchScreen.storyboard in Resources */,
 				F3CAD9EB1CADDC420036B8E9 /* Assets.xcassets in Resources */,
-				F3CAD9E91CADDC420036B8E9 /* Main.storyboard in Resources */,
+				F3CAD9E91CADDC420036B8E9 /* BadgeConfirmation.storyboard in Resources */,
+				05560B161CB44A5400B6F8D0 /* CreateEvent.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,12 +300,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F3CAD9E71CADDC420036B8E9 /* Main.storyboard */ = {
+		F3CAD9E71CADDC420036B8E9 /* BadgeConfirmation.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				F3CAD9E81CADDC420036B8E9 /* Base */,
 			);
-			name = Main.storyboard;
+			name = BadgeConfirmation.storyboard;
 			sourceTree = "<group>";
 		};
 		F3CAD9EC1CADDC420036B8E9 /* LaunchScreen.storyboard */ = {
@@ -404,6 +408,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GEmock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GEmock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -416,6 +421,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GEmock/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = GEmock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -487,6 +493,7 @@
 				F3CADA0A1CADDC420036B8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3CADA0B1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "GEmockTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +502,7 @@
 				F3CADA0D1CADDC420036B8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3CADA0E1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "GEmockUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +511,7 @@
 				F3CADA101CADDC420036B8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
