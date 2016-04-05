@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		173FE7A11CB4450E00475DD4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173FE7A01CB4450E00475DD4 /* DetailViewController.swift */; };
+		173FE7A51CB4460800475DD4 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173FE7A41CB4460800475DD4 /* EventTableViewController.swift */; };
+		173FE7A71CB4463A00475DD4 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 173FE7A61CB4463A00475DD4 /* CreateViewController.swift */; };
 		F3CAD9E41CADDC420036B8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */; };
-		F3CAD9E61CADDC420036B8E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CAD9E51CADDC420036B8E9 /* ViewController.swift */; };
 		F3CAD9E91CADDC420036B8E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CAD9E71CADDC420036B8E9 /* Main.storyboard */; };
 		F3CAD9EB1CADDC420036B8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */; };
 		F3CAD9EE1CADDC420036B8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CAD9EC1CADDC420036B8E9 /* LaunchScreen.storyboard */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		173FE7A01CB4450E00475DD4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		173FE7A41CB4460800475DD4 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		173FE7A61CB4463A00475DD4 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
 		F3CAD9E01CADDC420036B8E9 /* GEmock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEmock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F3CAD9E51CADDC420036B8E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F3CAD9E81CADDC420036B8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3CAD9ED1CADDC420036B8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -97,12 +101,14 @@
 		F3CAD9E21CADDC420036B8E9 /* GEmock */ = {
 			isa = PBXGroup;
 			children = (
+				173FE7A01CB4450E00475DD4 /* DetailViewController.swift */,
 				F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */,
-				F3CAD9E51CADDC420036B8E9 /* ViewController.swift */,
 				F3CAD9E71CADDC420036B8E9 /* Main.storyboard */,
 				F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */,
 				F3CAD9EC1CADDC420036B8E9 /* LaunchScreen.storyboard */,
 				F3CAD9EF1CADDC420036B8E9 /* Info.plist */,
+				173FE7A41CB4460800475DD4 /* EventTableViewController.swift */,
+				173FE7A61CB4463A00475DD4 /* CreateViewController.swift */,
 			);
 			path = GEmock;
 			sourceTree = "<group>";
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3CAD9E61CADDC420036B8E9 /* ViewController.swift in Sources */,
+				173FE7A71CB4463A00475DD4 /* CreateViewController.swift in Sources */,
 				F3CAD9E41CADDC420036B8E9 /* AppDelegate.swift in Sources */,
+				173FE7A51CB4460800475DD4 /* EventTableViewController.swift in Sources */,
+				173FE7A11CB4450E00475DD4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +495,7 @@
 				F3CADA0A1CADDC420036B8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3CADA0B1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "GEmockTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +504,7 @@
 				F3CADA0D1CADDC420036B8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F3CADA0E1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "GEmockUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +513,7 @@
 				F3CADA101CADDC420036B8E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
