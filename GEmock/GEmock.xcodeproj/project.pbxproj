@@ -10,6 +10,7 @@
 		053939801CB45995006D73B5 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0539397D1CB45995006D73B5 /* EventTableViewController.swift */; };
 		053939811CB45995006D73B5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0539397E1CB45995006D73B5 /* DetailViewController.swift */; };
 		053939821CB45995006D73B5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0539397F1CB45995006D73B5 /* CreateViewController.swift */; };
+		D3C5A54D1CB9985A00134715 /* attendence.csv in Resources */ = {isa = PBXBuildFile; fileRef = D3C5A54C1CB9985A00134715 /* attendence.csv */; };
 		F3CAD9E41CADDC420036B8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */; };
 		F3CAD9EB1CADDC420036B8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */; };
 		F3CAD9EE1CADDC420036B8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3CAD9EC1CADDC420036B8E9 /* LaunchScreen.storyboard */; };
@@ -40,6 +41,7 @@
 		0539397D1CB45995006D73B5 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		0539397E1CB45995006D73B5 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0539397F1CB45995006D73B5 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		D3C5A54C1CB9985A00134715 /* attendence.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = attendence.csv; path = "Supporting Files/attendence.csv"; sourceTree = "<group>"; };
 		F3CAD9E01CADDC420036B8E9 /* GEmock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEmock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,10 +82,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D3C5A54B1CB997FA00134715 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				D3C5A54C1CB9985A00134715 /* attendence.csv */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
 		F3CAD9D71CADDC420036B8E9 = {
 			isa = PBXGroup;
 			children = (
 				F3CAD9E21CADDC420036B8E9 /* GEmock */,
+				D3C5A54B1CB997FA00134715 /* Assets */,
 				F3CAD9F71CADDC420036B8E9 /* GEmockTests */,
 				F3CADA021CADDC420036B8E9 /* GEmockUITests */,
 				F3CAD9E11CADDC420036B8E9 /* Products */,
@@ -244,6 +255,7 @@
 				F3CAD9EE1CADDC420036B8E9 /* LaunchScreen.storyboard in Resources */,
 				F3CAD9EB1CADDC420036B8E9 /* Assets.xcassets in Resources */,
 				F3F34B561CB5741000FD8F70 /* Main.storyboard in Resources */,
+				D3C5A54D1CB9985A00134715 /* attendence.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
