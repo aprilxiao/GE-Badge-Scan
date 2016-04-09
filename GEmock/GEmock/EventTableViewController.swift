@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class EventTableViewController: UITableViewController {
 
     override func viewDidLoad() {
@@ -27,16 +28,25 @@ class EventTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+//    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+//        // #warning Incomplete implementation, return the number of sections
+//        return 0
+//    }
+//
+//    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of rows
+//        return 0
+//    }
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("Selected row = \(indexPath.description)")
+        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            print("export row tapped.")
+            
+        }
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
