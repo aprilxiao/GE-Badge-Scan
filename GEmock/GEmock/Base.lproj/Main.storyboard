@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--GE Badge Scanner-->
@@ -13,6 +14,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Niq-Ve-KdK">
+                            <rect key="frame" x="0.0" y="136" width="320" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Start Scanning now"/>
+                            <connections>
+                                <segue destination="u3z-wx-Cda" kind="push" id="tws-EL-Mbl"/>
+                            </connections>
+                        </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EventCell" id="yLJ-1o-4Fa">
                                 <rect key="frame" x="0.0" y="92" width="320" height="44"/>
@@ -42,7 +51,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zYs-7F-hWR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="178" y="217"/>
+            <point key="canvasLocation" x="150" y="194"/>
         </scene>
         <!--Create an event-->
         <scene sceneID="tne-QT-ifu">
@@ -102,34 +111,49 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc5-Dq-Rb8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Event title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zc5-Dq-Rb8">
                                 <rect key="frame" x="20" y="92" width="76" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aea-Ib-uUT">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aea-Ib-uUT">
                                 <rect key="frame" x="69" y="475" width="182" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Add a New Card"/>
+                                <connections>
+                                    <segue destination="qth-gb-SCY" kind="push" id="aBj-v0-0Dw"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Event Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ApL-98-9Wl">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Event Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ApL-98-9Wl">
                                 <rect key="frame" x="113" y="88" width="187" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNG-pD-uqL">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NNG-pD-uqL">
                                 <rect key="frame" x="40" y="188" width="240" height="192"/>
                                 <color key="backgroundColor" red="1" green="0.70593499940741755" blue="0.45987659909442735" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="NNG-pD-uqL" secondAttribute="trailing" id="2q0-Xx-ZgF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Aea-Ib-uUT" secondAttribute="trailing" id="4hT-Gb-JEr"/>
+                            <constraint firstItem="NNG-pD-uqL" firstAttribute="leading" secondItem="D3m-3G-r20" secondAttribute="leadingMargin" id="5YQ-vm-NmB"/>
+                            <constraint firstItem="ApL-98-9Wl" firstAttribute="trailing" secondItem="D3m-3G-r20" secondAttribute="trailingMargin" id="95l-Sy-jGZ"/>
+                            <constraint firstItem="ApL-98-9Wl" firstAttribute="leading" secondItem="Zc5-Dq-Rb8" secondAttribute="trailing" id="LQe-Wa-GIZ"/>
+                            <constraint firstItem="NNG-pD-uqL" firstAttribute="leading" secondItem="D3m-3G-r20" secondAttribute="leadingMargin" id="MDC-Nb-s4E"/>
+                            <constraint firstItem="Aea-Ib-uUT" firstAttribute="leading" secondItem="D3m-3G-r20" secondAttribute="leadingMargin" id="RDN-Bu-Bs3"/>
+                            <constraint firstItem="ApL-98-9Wl" firstAttribute="leading" secondItem="Zc5-Dq-Rb8" secondAttribute="trailing" constant="17" id="gE3-3w-jek"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="NNG-pD-uqL" secondAttribute="trailing" id="rWj-31-CFJ"/>
+                            <constraint firstItem="Zc5-Dq-Rb8" firstAttribute="leading" secondItem="D3m-3G-r20" secondAttribute="leadingMargin" id="xpd-5G-1dW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Scan Page" id="r7L-yw-rQo" propertyAccessControl="none"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Oj-Uk-fh3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="269" y="1194"/>
+            <point key="canvasLocation" x="59" y="972"/>
         </scene>
         <!--Confirmation-->
         <scene sceneID="kQQ-8H-VMw">
@@ -303,6 +327,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="flM-Gn-SJ0"/>
+        <segue reference="pw4-9S-R9Z"/>
+        <segue reference="nIc-5r-3Pm"/>
     </inferredMetricsTieBreakers>
 </document>
