@@ -36,6 +36,7 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
     }
     
     @IBAction func export(sender: AnyObject) {
+    
         
         //Check to see the device can send email.
         if( MFMailComposeViewController.canSendMail() ) {
@@ -63,77 +64,78 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
-
-        /*
-        //
-        let mailComposeViewController = configuredMailComposeViewController(attachmentName: String)
-        //
-        let csvName = "attendance.csv"
-        //
-        configuredMailComposeViewController(csvName)
-        if MFMailComposeViewController.canSendMail() {
-            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            self.showSendMailErrorAlert()
-        }
-    }
     
-    func configuredMailComposeViewController(attachmentName: String) -> MFMailComposeViewController {
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
-        
-        mailComposerVC.setToRecipients(["someone@somewhere.com"])
-        mailComposerVC.setSubject("Sending you an in-app e-mail...")
-        mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
-        
-        //
-        let fileParts = attachmentName.componentsSeparatedByString(".")
-        let fileName = fileParts[0]
-        let fileExtension = fileParts[1]
-        
-        if let filePath = NSBundle.mainBundle().pathForResource(fileName, ofType: fileExtension) {
-            print("file path loaded")
-            if let fileData = NSData(contentsOfFile: filePath), mimeType = MIMEType(type: fileExtension) {
-                print("file data loaded")
-                mailComposerVC.addAttachmentData(fileData, mimeType: mimeType.rawValue, fileName: fileName)
-                
-                self.presentViewController(mailComposerVC, animated: true, completion: nil)
-            }
-        return mailComposerVC
-    }
+    /*
+     //
+     let mailComposeViewController = configuredMailComposeViewController(attachmentName: String)
+     //
+     let csvName = "attendance.csv"
+     //
+     configuredMailComposeViewController(csvName)
+     if MFMailComposeViewController.canSendMail() {
+     self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+     } else {
+     self.showSendMailErrorAlert()
+     }
+     }
+     
+     func configuredMailComposeViewController(attachmentName: String) -> MFMailComposeViewController {
+     let mailComposerVC = MFMailComposeViewController()
+     mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+     
+     mailComposerVC.setToRecipients(["someone@somewhere.com"])
+     mailComposerVC.setSubject("Sending you an in-app e-mail...")
+     mailComposerVC.setMessageBody("Sending e-mail in-app is not so bad!", isHTML: false)
+     
+     //
+     let fileParts = attachmentName.componentsSeparatedByString(".")
+     let fileName = fileParts[0]
+     let fileExtension = fileParts[1]
+     
+     if let filePath = NSBundle.mainBundle().pathForResource(fileName, ofType: fileExtension) {
+     print("file path loaded")
+     if let fileData = NSData(contentsOfFile: filePath), mimeType = MIMEType(type: fileExtension) {
+     print("file data loaded")
+     mailComposerVC.addAttachmentData(fileData, mimeType: mimeType.rawValue, fileName: fileName)
+     
+     self.presentViewController(mailComposerVC, animated: true, completion: nil)
+     }
+     return mailComposerVC
+     }
+     
+     func showSendMailErrorAlert() {
+     /*let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
+     sendMailErrorAlert.show()*/
+     }
+     
+     // MARK: MFMailComposeViewControllerDelegate Method
+     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+     controller.dismissViewControllerAnimated(true, completion: nil)
+     }
+     
+     */
     
-    func showSendMailErrorAlert() {
-        /*let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", delegate: self, cancelButtonTitle: "OK")
-        sendMailErrorAlert.show()*/
-    }
-    
-    // MARK: MFMailComposeViewControllerDelegate Method
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-        */
-        
-   override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
-
-   override func didReceiveMemoryWarning() {
+    
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
