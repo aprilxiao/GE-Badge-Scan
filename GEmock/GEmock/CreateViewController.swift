@@ -12,14 +12,17 @@ import CoreData
 
 class CreateViewController: UIViewController {
     
-    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
+    @IBOutlet weak var eventName: UITextField!
+    @IBOutlet weak var eventLocation: UITextField!
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     @IBAction func createEvent(sender: AnyObject) {
         let description = NSEntityDescription.entityForName("Event", inManagedObjectContext: managedObjectContext)
         let event = Event(entity: description!, insertIntoManagedObjectContext: managedObjectContext)
-        event.name = "Test event"
-        event.location = "Test location"
+        event.name = eventName.text
+        event.location = eventLocation.text
         try! managedObjectContext.save()
     }
 

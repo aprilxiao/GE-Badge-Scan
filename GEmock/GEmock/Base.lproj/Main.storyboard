@@ -113,6 +113,10 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="eventLocation" destination="8Ce-gx-e6K" id="ugI-8C-4eK"/>
+                        <outlet property="eventName" destination="Xy6-Co-YXm" id="VCp-fq-lNw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
