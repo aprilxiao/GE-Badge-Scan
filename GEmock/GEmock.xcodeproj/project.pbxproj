@@ -10,6 +10,10 @@
 		053939801CB45995006D73B5 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0539397D1CB45995006D73B5 /* EventTableViewController.swift */; };
 		053939811CB45995006D73B5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0539397E1CB45995006D73B5 /* DetailViewController.swift */; };
 		053939821CB45995006D73B5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0539397F1CB45995006D73B5 /* CreateViewController.swift */; };
+		054D5E541CC18A870019A940 /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D5E501CC18A870019A940 /* Event+CoreDataProperties.swift */; };
+		054D5E551CC18A880019A940 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D5E511CC18A870019A940 /* Event.swift */; };
+		054D5E561CC18A880019A940 /* AttendanceRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D5E521CC18A870019A940 /* AttendanceRecord+CoreDataProperties.swift */; };
+		054D5E571CC18A880019A940 /* AttendanceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D5E531CC18A870019A940 /* AttendanceRecord.swift */; };
 		D3C5A54D1CB9985A00134715 /* attendence.csv in Resources */ = {isa = PBXBuildFile; fileRef = D3C5A54C1CB9985A00134715 /* attendence.csv */; };
 		F3CAD9E41CADDC420036B8E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */; };
 		F3CAD9EB1CADDC420036B8E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */; };
@@ -41,6 +45,10 @@
 		0539397D1CB45995006D73B5 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
 		0539397E1CB45995006D73B5 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0539397F1CB45995006D73B5 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		054D5E501CC18A870019A940 /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		054D5E511CC18A870019A940 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		054D5E521CC18A870019A940 /* AttendanceRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttendanceRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		054D5E531CC18A870019A940 /* AttendanceRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceRecord.swift; sourceTree = "<group>"; };
 		D3C5A54C1CB9985A00134715 /* attendence.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = attendence.csv; path = "Supporting Files/attendence.csv"; sourceTree = "<group>"; };
 		F3CAD9E01CADDC420036B8E9 /* GEmock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEmock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +101,10 @@
 		F3CAD9D71CADDC420036B8E9 = {
 			isa = PBXGroup;
 			children = (
+				054D5E501CC18A870019A940 /* Event+CoreDataProperties.swift */,
+				054D5E511CC18A870019A940 /* Event.swift */,
+				054D5E521CC18A870019A940 /* AttendanceRecord+CoreDataProperties.swift */,
+				054D5E531CC18A870019A940 /* AttendanceRecord.swift */,
 				F3CAD9E21CADDC420036B8E9 /* GEmock */,
 				D3C5A54B1CB997FA00134715 /* Assets */,
 				F3CAD9F71CADDC420036B8E9 /* GEmockTests */,
@@ -280,10 +292,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				054D5E541CC18A870019A940 /* Event+CoreDataProperties.swift in Sources */,
 				053939821CB45995006D73B5 /* CreateViewController.swift in Sources */,
 				053939801CB45995006D73B5 /* EventTableViewController.swift in Sources */,
 				F3F34B591CB5750C00FD8F70 /* Model.xcdatamodeld in Sources */,
 				F3CAD9E41CADDC420036B8E9 /* AppDelegate.swift in Sources */,
+				054D5E561CC18A880019A940 /* AttendanceRecord+CoreDataProperties.swift in Sources */,
+				054D5E571CC18A880019A940 /* AttendanceRecord.swift in Sources */,
+				054D5E551CC18A880019A940 /* Event.swift in Sources */,
 				053939811CB45995006D73B5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

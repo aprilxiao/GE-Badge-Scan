@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="9057" systemVersion="15C50" minimumToolsVersion="Xcode 7.0">
-    <entity name="AttendanceRecord" syncable="YES">
+    <entity name="AttendanceRecord" representedClassName=".AttendanceRecord" syncable="YES">
         <attribute name="employee_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="first_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="last_name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="attended" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AttendanceRecord" syncable="YES"/>
     </entity>
-    <entity name="Event" syncable="YES">
+    <entity name="Event" representedClassName=".Event" syncable="YES">
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="-63" positionY="-18" width="128" height="75"/>
         <element name="AttendanceRecord" positionX="-54" positionY="9" width="128" height="105"/>
+        <element name="Event" positionX="-63" positionY="-18" width="128" height="75"/>
     </elements>
 </model>

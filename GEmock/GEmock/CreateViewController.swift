@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import CoreData
+
 
 class CreateViewController: UIViewController {
     
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     
     
-    
-    
-    
+    @IBAction func createEvent(sender: AnyObject) {
+        let description = NSEntityDescription.entityForName("Event", inManagedObjectContext: managedObjectContext)
+        let event = Event(entity: description!, insertIntoManagedObjectContext: managedObjectContext)
+        event.name = "Test event"
+        event.location = "Test location"
+        try! managedObjectContext.save()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
