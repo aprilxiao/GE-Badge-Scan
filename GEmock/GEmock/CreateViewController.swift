@@ -24,6 +24,8 @@ class CreateViewController: UIViewController {
         event.name = eventName.text
         event.location = eventLocation.text
         try! managedObjectContext.save()
+        
+        navigationController?.popViewControllerAnimated(true)
     }
 
     override func viewDidLoad() {
