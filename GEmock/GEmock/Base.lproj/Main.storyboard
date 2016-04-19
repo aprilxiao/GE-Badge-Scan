@@ -142,7 +142,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scanning for event:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR4-90-3m7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Scanning for event:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jR4-90-3m7">
                                 <rect key="frame" x="20" y="92" width="154" height="38"/>
                                 <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -150,12 +150,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="GE Affinity" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fe9-Cy-hlh">
-                                <rect key="frame" x="182" y="96" width="129" height="30"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vw-Mg-lnO">
                                 <rect key="frame" x="20" y="138" width="125" height="39"/>
                                 <animations/>
@@ -215,6 +209,13 @@
                                     <action selector="takePhoto:" destination="qth-gb-SCY" eventType="touchUpInside" id="W57-W5-eCw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRH-EE-sez">
+                                <rect key="frame" x="196" y="100" width="371" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -224,23 +225,18 @@
                             <constraint firstItem="jR4-90-3m7" firstAttribute="leading" secondItem="7vw-Mg-lnO" secondAttribute="leading" id="7Uq-UV-wlY"/>
                             <constraint firstItem="aom-yM-On3" firstAttribute="top" secondItem="uW5-zh-R5s" secondAttribute="bottom" constant="16" id="AVV-LR-zni"/>
                             <constraint firstItem="tQr-Av-ccG" firstAttribute="top" secondItem="7vw-Mg-lnO" secondAttribute="bottom" constant="8" symbolic="YES" id="E1s-3B-Ap8"/>
-                            <constraint firstItem="jR4-90-3m7" firstAttribute="centerY" secondItem="Fe9-Cy-hlh" secondAttribute="centerY" id="IGj-SX-Rxs"/>
                             <constraint firstItem="Ism-53-1Pm" firstAttribute="top" secondItem="aom-yM-On3" secondAttribute="bottom" constant="20" id="JSU-d9-jwp"/>
                             <constraint firstItem="aom-yM-On3" firstAttribute="trailing" secondItem="uW5-zh-R5s" secondAttribute="trailing" id="Kmw-6H-ogy"/>
                             <constraint firstItem="Ism-53-1Pm" firstAttribute="centerX" secondItem="BGS-Fl-kMW" secondAttribute="centerX" id="LzI-Io-5sT"/>
-                            <constraint firstItem="aom-yM-On3" firstAttribute="leading" secondItem="Fe9-Cy-hlh" secondAttribute="leading" id="PEf-fN-KOf"/>
                             <constraint firstItem="aom-yM-On3" firstAttribute="trailing" secondItem="U2L-lu-8cc" secondAttribute="trailing" id="Q09-9M-6Zo"/>
                             <constraint firstItem="aom-yM-On3" firstAttribute="leading" secondItem="ZcS-Bp-ckH" secondAttribute="trailing" constant="51" id="RMc-Zj-PBL"/>
                             <constraint firstItem="ZcS-Bp-ckH" firstAttribute="trailing" secondItem="tQr-Av-ccG" secondAttribute="trailing" id="WWy-PD-krX"/>
                             <constraint firstItem="Dt1-TE-Td5" firstAttribute="top" secondItem="ZcS-Bp-ckH" secondAttribute="bottom" constant="331" id="bde-sE-bDy"/>
                             <constraint firstItem="7vw-Mg-lnO" firstAttribute="top" secondItem="jR4-90-3m7" secondAttribute="bottom" constant="8" symbolic="YES" id="daN-ib-3aO"/>
                             <constraint firstItem="U2L-lu-8cc" firstAttribute="leading" secondItem="7vw-Mg-lnO" secondAttribute="trailing" constant="37" id="dxX-P2-ZZr"/>
-                            <constraint firstItem="aom-yM-On3" firstAttribute="trailing" secondItem="Fe9-Cy-hlh" secondAttribute="trailing" id="e3e-2n-zQI"/>
                             <constraint firstItem="7vw-Mg-lnO" firstAttribute="leading" secondItem="tQr-Av-ccG" secondAttribute="leading" id="f0H-th-oZS"/>
                             <constraint firstItem="7vw-Mg-lnO" firstAttribute="centerY" secondItem="U2L-lu-8cc" secondAttribute="centerY" id="gew-b8-eNX"/>
                             <constraint firstItem="ZcS-Bp-ckH" firstAttribute="leading" secondItem="tQr-Av-ccG" secondAttribute="leading" id="iST-gW-Q8E"/>
-                            <constraint firstItem="Fe9-Cy-hlh" firstAttribute="leading" secondItem="jR4-90-3m7" secondAttribute="trailing" constant="8" symbolic="YES" id="k98-Xi-yCA"/>
-                            <constraint firstItem="U2L-lu-8cc" firstAttribute="top" secondItem="Fe9-Cy-hlh" secondAttribute="bottom" constant="17" id="pzV-su-kqO"/>
                             <constraint firstItem="aom-yM-On3" firstAttribute="leading" secondItem="BGS-Fl-kMW" secondAttribute="leading" constant="182" id="qUe-nl-8l1"/>
                             <constraint firstItem="Ism-53-1Pm" firstAttribute="centerY" secondItem="BGS-Fl-kMW" secondAttribute="centerY" id="th6-6B-5su"/>
                             <constraint firstItem="aom-yM-On3" firstAttribute="leading" secondItem="U2L-lu-8cc" secondAttribute="leading" id="vzQ-0h-c3g"/>
@@ -252,7 +248,7 @@
                     <navigationItem key="navigationItem" title="Scan" id="5sa-6Q-pV3"/>
                     <connections>
                         <outlet property="emloyeeId" destination="U2L-lu-8cc" id="C21-aU-1lT"/>
-                        <outlet property="eventName" destination="Fe9-Cy-hlh" id="lM6-Pw-XY6"/>
+                        <outlet property="eventName" destination="lRH-EE-sez" id="wWO-Ec-61P"/>
                         <outlet property="firstName" destination="uW5-zh-R5s" id="eBw-Sj-6y2"/>
                         <outlet property="lastName" destination="aom-yM-On3" id="y8M-G9-Nh6"/>
                     </connections>
@@ -292,7 +288,7 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                 <state key="normal" title="Scan"/>
                                 <connections>
-                                    <segue destination="qth-gb-SCY" kind="show" id="Y0M-aZ-ui6"/>
+                                    <segue destination="qth-gb-SCY" kind="show" identifier="scan" id="Y0M-aZ-ui6"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GE Affinity Networks Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5D-8b-It6">

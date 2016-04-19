@@ -10,11 +10,13 @@ import UIKit
 import Foundation
 
 class ScanViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate {
-    @IBOutlet weak var eventName: UITextField!
     @IBOutlet weak var emloyeeId: UITextField!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
+    @IBOutlet weak var eventName: UILabel!
+    
+    var event: Event? = nil
     
     var activityIndicator:UIActivityIndicatorView!
     var originalTopMargin:CGFloat!
@@ -198,7 +200,7 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         tesseract.image = image.g8_blackAndWhite()
         tesseract.recognize()
         // 7
-        eventName.text = tesseract.recognizedText
+        eventName.text = event!.name
         let data = String(tesseract.recognizedText)
         var myStrings = data.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
         myStrings = myStrings.filter({$0 != ""})
