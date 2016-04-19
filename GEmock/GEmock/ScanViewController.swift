@@ -201,7 +201,7 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         eventName.text = tesseract.recognizedText
         let data = String(tesseract.recognizedText)
         var myStrings = data.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
-        myStrings = myStrings.filter({$0 != "\n"})
+        myStrings = myStrings.filter({$0 != ""})
         var idPosition = 0
         for (index,line) in myStrings.enumerate(){
             if let nineDigit = Int(line) {
