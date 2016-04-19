@@ -101,15 +101,16 @@ class EventTableViewController: UITableViewController, NSFetchedResultsControlle
         return true
     }
     */
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "details" {
+            let path = tableView.indexPathForCell(sender as! UITableViewCell)
+            let controller: DetailViewController = segue.destinationViewController as! DetailViewController
+            let event:Event = resultsController.objectAtIndexPath(path!) as! Event
+            controller.event = event
+        }
     }
-    */
 
 }

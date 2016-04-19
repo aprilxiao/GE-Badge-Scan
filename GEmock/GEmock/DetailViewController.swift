@@ -35,6 +35,11 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
         }
     }
     
+    var event: Event? = nil
+    
+    @IBOutlet weak var eventLocation: UILabel!
+    @IBOutlet weak var eventName: UILabel!
+    
     @IBAction func export(sender: AnyObject) {
     
         
@@ -118,7 +123,10 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        if event != nil {
+            eventName.text = event?.name
+            eventLocation.text = event?.location
+        }
     }
     
     override func didReceiveMemoryWarning() {
