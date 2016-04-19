@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import CoreData
 
 class ScanViewController: UIViewController, UITextViewDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var emloyeeId: UITextField!
@@ -21,10 +22,13 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     var activityIndicator:UIActivityIndicatorView!
     var originalTopMargin:CGFloat!
     
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        takePhoto();
     }
     /*override func viewDidAppear(animated: Bool) {
      super.viewDidAppear(animated)
@@ -73,7 +77,29 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         self.presentViewController(imagePicker, animated: true, completion: nil)
         
     }*/
-    @IBAction func takePhoto(sender: AnyObject) {
+    
+    
+    @IBAction func scanNext(sender: AnyObject) {
+        saveRecord();
+        
+        takePhoto();
+    }
+    
+    func saveRecord() {
+        let description = NSEntityDescription.entityForName("AttendanceRecord", inManagedObjectContext: managedObjectContext)
+        let record = AttendanceRecord(entity: description!, insertIntoManagedObjectContext: managedObjectContext)
+        record.attended = event
+        record.employee_id = emloyeeId.text
+        record.first_name = firstName.text
+        record.last_name = lastName.text
+        try! managedObjectContext.save()
+        
+        emloyeeId.text = ""
+        firstName.text = ""
+        lastName.text = ""
+    }
+    
+    func takePhoto() {
      // 1
      view.endEditing(true)
      //moveViewDown()

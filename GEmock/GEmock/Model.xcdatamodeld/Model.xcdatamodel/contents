@@ -4,7 +4,7 @@
         <attribute name="employee_id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="first_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="last_name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="attended" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="AttendanceRecord" syncable="YES"/>
+        <relationship name="attended" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Event" syncable="YES"/>
     </entity>
     <entity name="Event" representedClassName=".Event" syncable="YES">
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>

@@ -206,7 +206,7 @@
                                 </constraints>
                                 <state key="normal" title="Scan next"/>
                                 <connections>
-                                    <action selector="takePhoto:" destination="qth-gb-SCY" eventType="touchUpInside" id="W57-W5-eCw"/>
+                                    <action selector="scanNext:" destination="qth-gb-SCY" eventType="touchUpInside" id="SdC-xx-Xls"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRH-EE-sez">
