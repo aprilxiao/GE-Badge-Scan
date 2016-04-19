@@ -7,17 +7,38 @@
 //
 
 import UIKit
+import CoreData
 
-class EventTableViewController: UITableViewController {
+class EventTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    var resultsController: NSFetchedResultsController = NSFetchedResultsController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        resultsController = NSFetchedResultsController(fetchRequest: fetchRequest(), managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        resultsController.delegate = self
+        try! resultsController.performFetch()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func fetchRequest() -> NSFetchRequest {
+        let request = NSFetchRequest(entityName: "Event")
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        request.sortDescriptors = [sortDescriptor]
+        
+        return request
+    }
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,24 +49,23 @@ class EventTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return (resultsController.sections?.count)!
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (resultsController.sections?[section].numberOfObjects)!
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let event = resultsController.objectAtIndexPath(indexPath) as! Event
+        cell.textLabel?.text = event.name
 
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.
