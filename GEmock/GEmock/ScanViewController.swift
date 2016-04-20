@@ -121,11 +121,26 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
             let cameraButton = UIAlertAction(title: "Take Photo",
                 style: .Default) { (alert) -> Void in
                     let imagePicker = UIImagePickerController()
+                    self.imagePikerViewController = imagePicker;
                     imagePicker.delegate = self
                     imagePicker.sourceType = .Camera
+                    imagePicker.showsCameraControls = false
+                    NSBundle.mainBundle().loadNibNamed("CustomOverLayview", owner: self, options: nil)[0]
+                    self.overlayView.frame = imagePicker.cameraOverlayView!.frame;
+                    self.overlayView.backgroundColor = UIColor.clearColor()
+                    imagePicker.cameraOverlayView = self.overlayView
+                    self.overlayView = nil
                     self.presentViewController(imagePicker,
                         animated: true,
                         completion: nil)
+                    
+                    let line = UIImageView(image:UIImage(named:"scan_line"))
+                    self.line = line
+                    line.frame=CGRectMake(30,10,190,5)
+                    self.pickBg.addSubview(line)
+                    
+                    self.time = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ScanViewController.timerFireMethod), userInfo: nil, repeats: true)
+                    
             }
             imagePickerActionSheet.addAction(cameraButton)
         }
@@ -149,8 +164,9 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         presentViewController(imagePickerActionSheet, animated: true,
             completion: nil)
     }
+
     
-       
+    
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
         
         var scaledSize = CGSizeMake(maxDimension, maxDimension)
