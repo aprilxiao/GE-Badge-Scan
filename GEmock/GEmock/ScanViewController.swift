@@ -17,6 +17,16 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
     @IBOutlet weak var eventName: UILabel!
     
+    @IBOutlet weak var overlayView: UIView!
+    
+    @IBOutlet weak var pickBg: UIImageView!
+    
+    
+    weak var line: UIImageView!
+    weak var imagePikerViewController : UIImagePickerController!
+    
+    var time : NSTimer!
+    
     var event: Event? = nil
     
     var activityIndicator:UIActivityIndicatorView!
@@ -244,6 +254,28 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         //let employeeid = NSCharacterSet.decimalDigitCharacterSet(tesseract.recognizedText);
         // 8
         removeActivityIndicator()
+    }
+    
+    @IBAction func takePicture(sender: AnyObject) {
+        self.imagePikerViewController.takePicture()
+        self.time.invalidate()
+    }
+    
+    @IBAction func cancelTakePicture(sender: AnyObject) {
+        self.time.invalidate()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func timerFireMethod () {
+        
+        UIView.beginAnimations("animationID", context: nil)
+        
+        UIView.setAnimationDuration(2)
+        UIView.setAnimationCurve(UIViewAnimationCurve.Linear)
+        
+        UIView.setAnimationRepeatCount(100)
+        self.line.frame = CGRectMake(30, 250, 190, 5)
+        UIView.commitAnimations()
     }
 }
 
