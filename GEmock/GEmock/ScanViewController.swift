@@ -37,8 +37,6 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        takePhoto();
     }
     /*override func viewDidAppear(animated: Bool) {
      super.viewDidAppear(animated)
@@ -49,50 +47,10 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    /*@IBAction func takePhoto(sender: AnyObject) {
-        
-        if !UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera){
-            return
-        }
-        
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = UIImagePickerControllerSourceType.Camera;
-        
-        //Create camera overlay
-        let pickerFrame = CGRectMake(0, UIApplication.sharedApplication().statusBarFrame.size.height, imagePicker.view.bounds.width, imagePicker.view.bounds.height - imagePicker.navigationBar.bounds.size.height - imagePicker.toolbar.bounds.size.height)
-        let squareFrame = CGRectMake(0, 0, 200, 200)
-        UIGraphicsBeginImageContext(pickerFrame.size)
-        
-        let context = UIGraphicsGetCurrentContext()
-        CGContextSaveGState(context)
-        CGContextAddRect(context, CGContextGetClipBoundingBox(context))
-        CGContextMoveToPoint(context, squareFrame.origin.x, squareFrame.origin.y)
-        CGContextAddLineToPoint(context, squareFrame.origin.x + squareFrame.width, squareFrame.origin.y)
-        CGContextAddLineToPoint(context, squareFrame.origin.x + squareFrame.width, squareFrame.origin.y + squareFrame.size.height)
-        CGContextAddLineToPoint(context, squareFrame.origin.x, squareFrame.origin.y + squareFrame.size.height)
-        CGContextAddLineToPoint(context, squareFrame.origin.x, squareFrame.origin.y)
-        CGContextEOClip(context)
-        CGContextMoveToPoint(context, pickerFrame.origin.x, pickerFrame.origin.y)
-        CGContextSetRGBFillColor(context, 0, 0, 0, 1)
-        CGContextFillRect(context, pickerFrame)
-        CGContextRestoreGState(context)
-        
-        let overlayImage = UIGraphicsGetImageFromCurrentImageContext()
-        UIGraphicsEndImageContext();
-        
-        let overlayView = UIImageView(frame: pickerFrame)
-        overlayView.image = overlayImage
-        imagePicker.cameraOverlayView = overlayView
-        self.presentViewController(imagePicker, animated: true, completion: nil)
-        
-    }*/
     
     
     @IBAction func scanNext(sender: AnyObject) {
         saveRecord();
-        
-        takePhoto();
     }
     
     func saveRecord() {
@@ -109,62 +67,57 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         lastName.text = ""
     }
     
-    func takePhoto() {
+
+
+    @IBAction func takePhoto(sender: AnyObject) {
         // 1
         view.endEditing(true)
         //moveViewDown()
         // 2
         let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
-            message: nil, preferredStyle: .ActionSheet)
+                                                       message: nil, preferredStyle: .ActionSheet)
         // 3
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
-            let cameraButton = UIAlertAction(title: "Take Photo",
-                style: .Default) { (alert) -> Void in
-                    let imagePicker = UIImagePickerController()
-                    self.imagePikerViewController = imagePicker;
-                    imagePicker.delegate = self
-                    imagePicker.sourceType = .Camera
-                    imagePicker.showsCameraControls = false
-                    NSBundle.mainBundle().loadNibNamed("CustomOverLayview", owner: self, options: nil)[0]
-                    self.overlayView.frame = imagePicker.cameraOverlayView!.frame;
-                    self.overlayView.backgroundColor = UIColor.clearColor()
-                    imagePicker.cameraOverlayView = self.overlayView
-                    self.overlayView = nil
-                    self.presentViewController(imagePicker,
-                        animated: true,
-                        completion: nil)
-                    
-                    let line = UIImageView(image:UIImage(named:"scan_line"))
-                    self.line = line
-                    line.frame=CGRectMake(30,10,190,5)
-                    self.pickBg.addSubview(line)
-                    
-                    self.time = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ScanViewController.timerFireMethod), userInfo: nil, repeats: true)
-                    
+            let cameraButton = UIAlertAction(title: "Take Photo", style: .Default) {
+                (alert) -> Void in
+                let imagePicker = UIImagePickerController()
+                self.imagePikerViewController = imagePicker;
+                imagePicker.delegate = self
+                imagePicker.sourceType = .Camera
+                imagePicker.showsCameraControls = false
+                NSBundle.mainBundle().loadNibNamed("CustomOverLayview", owner: self, options: nil)[0]
+                self.overlayView.frame = imagePicker.cameraOverlayView!.frame;
+                self.overlayView.backgroundColor = UIColor.clearColor()
+                imagePicker.cameraOverlayView = self.overlayView
+                self.overlayView = nil
+                self.presentViewController(imagePicker, animated: true, completion: nil)
+                                                
+                let line = UIImageView(image:UIImage(named:"scan_line"))
+                self.line = line
+                line.frame=CGRectMake(30,10,190,5)
+                self.pickBg.addSubview(line)
+                                                
+                self.time = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ScanViewController.timerFireMethod), userInfo: nil, repeats: true)
             }
             imagePickerActionSheet.addAction(cameraButton)
         }
         // 4
-        let libraryButton = UIAlertAction(title: "Choose Existing",
-            style: .Default) { (alert) -> Void in
-                let imagePicker = UIImagePickerController()
-                imagePicker.delegate = self
-                imagePicker.sourceType = .PhotoLibrary
-                self.presentViewController(imagePicker,
-                    animated: true,
-                    completion: nil)
+        let libraryButton = UIAlertAction(title: "Choose Existing", style: .Default) {
+            (alert) -> Void in
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .PhotoLibrary
+            self.presentViewController(imagePicker, animated: true, completion: nil)
         }
         imagePickerActionSheet.addAction(libraryButton)
         // 5
-        let cancelButton = UIAlertAction(title: "Cancel",
-            style: .Cancel) { (alert) -> Void in
+        let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel) { (alert) -> Void in
         }
         imagePickerActionSheet.addAction(cancelButton)
         // 6
-        presentViewController(imagePickerActionSheet, animated: true,
-            completion: nil)
+        presentViewController(imagePickerActionSheet, animated: true, completion: nil)
+        
     }
-
     
     
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
