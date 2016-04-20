@@ -62,6 +62,7 @@ class EventTableViewController: UITableViewController, NSFetchedResultsControlle
 
         let event = resultsController.objectAtIndexPath(indexPath) as! Event
         cell.textLabel?.text = event.name
+        cell.detailTextLabel?.text = event.location
 
         return cell
     }
@@ -75,17 +76,41 @@ class EventTableViewController: UITableViewController, NSFetchedResultsControlle
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
     override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == .Delete {
+            
+            let managedObject:Event = resultsController.objectAtIndexPath(indexPath) as! Event
+            
+            let  deleteActionSheet = UIAlertController(title: "Delete?", message: "\(managedObject.name!)", preferredStyle: .ActionSheet)
+        
+            let cancel: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            self.tableView.setEditing(false, animated: true)
+            }
+            
+            deleteActionSheet.addAction(cancel)
+        
+            let delete: UIAlertAction = UIAlertAction(title: "Delete Event", style: .Destructive) { action -> Void in
+            self.managedObjectContext.deleteObject(managedObject)
+            try! self.managedObjectContext.save()
+            }
+        
+            deleteActionSheet.addAction(delete)
+
+            presentViewController(deleteActionSheet, animated: true, completion: nil)
+        
+    }
+     /*
         if editingStyle == .Delete {
             // Delete the row from the data source
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
         } else if editingStyle == .Insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+        }    */
     }
-    */
+ 
 
     /*
     // Override to support rearranging the table view.

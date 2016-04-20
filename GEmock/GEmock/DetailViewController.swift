@@ -70,6 +70,9 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    
+    
+    
     /*
      //
      let mailComposeViewController = configuredMailComposeViewController(attachmentName: String)
