@@ -100,45 +100,45 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     }
     
     func takePhoto() {
-     // 1
-     view.endEditing(true)
-     //moveViewDown()
-     // 2
-     let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
-     message: nil, preferredStyle: .ActionSheet)
-     // 3
-     if UIImagePickerController.isSourceTypeAvailable(.Camera) {
-     let cameraButton = UIAlertAction(title: "Take Photo",
-     style: .Default) { (alert) -> Void in
-     let imagePicker = UIImagePickerController()
-     imagePicker.delegate = self
-     imagePicker.sourceType = .Camera
-     self.presentViewController(imagePicker,
-     animated: true,
-     completion: nil)
-     }
-     imagePickerActionSheet.addAction(cameraButton)
-     }
-     // 4
-     let libraryButton = UIAlertAction(title: "Choose Existing",
-     style: .Default) { (alert) -> Void in
-     let imagePicker = UIImagePickerController()
-     imagePicker.delegate = self
-     imagePicker.sourceType = .PhotoLibrary
-     self.presentViewController(imagePicker,
-     animated: true,
-     completion: nil)
-     }
-     imagePickerActionSheet.addAction(libraryButton)
-     // 5
-     let cancelButton = UIAlertAction(title: "Cancel",
-     style: .Cancel) { (alert) -> Void in
-     }
-     imagePickerActionSheet.addAction(cancelButton)
-     // 6
-     presentViewController(imagePickerActionSheet, animated: true,
-     completion: nil)
-     }
+        // 1
+        view.endEditing(true)
+        //moveViewDown()
+        // 2
+        let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
+            message: nil, preferredStyle: .ActionSheet)
+        // 3
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let cameraButton = UIAlertAction(title: "Take Photo",
+                style: .Default) { (alert) -> Void in
+                    let imagePicker = UIImagePickerController()
+                    imagePicker.delegate = self
+                    imagePicker.sourceType = .Camera
+                    self.presentViewController(imagePicker,
+                        animated: true,
+                        completion: nil)
+            }
+            imagePickerActionSheet.addAction(cameraButton)
+        }
+        // 4
+        let libraryButton = UIAlertAction(title: "Choose Existing",
+            style: .Default) { (alert) -> Void in
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .PhotoLibrary
+                self.presentViewController(imagePicker,
+                    animated: true,
+                    completion: nil)
+        }
+        imagePickerActionSheet.addAction(libraryButton)
+        // 5
+        let cancelButton = UIAlertAction(title: "Cancel",
+            style: .Cancel) { (alert) -> Void in
+        }
+        imagePickerActionSheet.addAction(cancelButton)
+        // 6
+        presentViewController(imagePickerActionSheet, animated: true,
+            completion: nil)
+    }
     
        
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
