@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScanViewController" customModule="GEmock" customModuleProvider="target">
+            <connections>
+                <outlet property="overlayView" destination="iN0-l3-epB" id="H43-oy-gV9"/>
+                <outlet property="pickBg" destination="Qr0-dc-nrR" id="gbB-Ch-aVO"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQq-CO-JOi">
+                    <rect key="frame" x="250" y="500" width="80" height="80"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="3M4-uL-KzC"/>
+                        <constraint firstAttribute="width" constant="80" id="3vl-dA-mPA"/>
+                    </constraints>
+                    <state key="normal" image="images.png">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="takePicture:" destination="-1" eventType="touchUpInside" id="ObB-ZU-N98"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zXs-fl-nYq">
+                    <rect key="frame" x="28" y="535" width="48" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Cancel">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelTakePicture:" destination="-1" eventType="touchUpInside" id="Xcj-m9-MX1"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan_pick_bg" translatesAutoresizingMaskIntoConstraints="NO" id="Qr0-dc-nrR">
+                    <rect key="frame" x="170" y="80" width="260" height="260"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="260" id="jC7-bw-Qja"/>
+                        <constraint firstAttribute="height" constant="260" id="vwZ-Oo-nbM"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Please Scan Your Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgP-AF-S5g">
+                    <rect key="frame" x="0.0" y="350" width="600" height="25"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="rO1-7m-IM3"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.97176927328109741" green="0.041333653032779694" blue="0.059692390263080597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This Side Up ↑" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPs-An-Cwp">
+                    <rect key="frame" x="0.0" y="45" width="600" height="25"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="Lzt-Vy-YX4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.97176927328109741" green="0.041333653032779694" blue="0.059692390263080597" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="zXs-fl-nYq" firstAttribute="centerY" secondItem="yQq-CO-JOi" secondAttribute="centerY" constant="10" id="0Y7-Pp-lPK"/>
+                <constraint firstAttribute="trailing" secondItem="XgP-AF-S5g" secondAttribute="trailing" id="IZS-ZN-zQG"/>
+                <constraint firstAttribute="trailing" secondItem="VPs-An-Cwp" secondAttribute="trailing" id="Jc8-Og-G9d"/>
+                <constraint firstItem="Qr0-dc-nrR" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="SoZ-Fu-aQj"/>
+                <constraint firstItem="Qr0-dc-nrR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="WvN-O3-Ayv"/>
+                <constraint firstAttribute="centerX" secondItem="yQq-CO-JOi" secondAttribute="centerX" constant="10" id="XhP-l8-Rmo"/>
+                <constraint firstItem="XgP-AF-S5g" firstAttribute="top" secondItem="Qr0-dc-nrR" secondAttribute="bottom" constant="10" id="bl3-Ol-VfK"/>
+                <constraint firstItem="Qr0-dc-nrR" firstAttribute="top" secondItem="VPs-An-Cwp" secondAttribute="bottom" constant="10" id="cD7-ja-huP"/>
+                <constraint firstItem="Qr0-dc-nrR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="80" id="grP-dC-PW8"/>
+                <constraint firstAttribute="bottom" secondItem="yQq-CO-JOi" secondAttribute="bottom" constant="20" id="hmE-TT-IRd"/>
+                <constraint firstItem="XgP-AF-S5g" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pTH-Ec-3J0"/>
+                <constraint firstItem="VPs-An-Cwp" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pq5-D5-wvM"/>
+                <constraint firstItem="Qr0-dc-nrR" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="trh-Cy-27o"/>
+                <constraint firstItem="zXs-fl-nYq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="28" id="yae-qD-BPk"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="SoZ-Fu-aQj"/>
+                    <exclude reference="grP-dC-PW8"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="381" y="341"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="images.png" width="256" height="256"/>
+        <image name="scan_pick_bg" width="280" height="280"/>
+    </resources>
+</document>

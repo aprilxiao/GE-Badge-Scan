@@ -17,6 +17,16 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
     @IBOutlet weak var eventName: UILabel!
     
+    @IBOutlet weak var overlayView: UIView!
+    
+    @IBOutlet weak var pickBg: UIImageView!
+    
+    
+    weak var line: UIImageView!
+    weak var imagePikerViewController : UIImagePickerController!
+    
+    var time : NSTimer!
+    
     var event: Event? = nil
     
     var activityIndicator:UIActivityIndicatorView!
@@ -100,47 +110,63 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     }
     
     func takePhoto() {
-     // 1
-     view.endEditing(true)
-     //moveViewDown()
-     // 2
-     let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
-     message: nil, preferredStyle: .ActionSheet)
-     // 3
-     if UIImagePickerController.isSourceTypeAvailable(.Camera) {
-     let cameraButton = UIAlertAction(title: "Take Photo",
-     style: .Default) { (alert) -> Void in
-     let imagePicker = UIImagePickerController()
-     imagePicker.delegate = self
-     imagePicker.sourceType = .Camera
-     self.presentViewController(imagePicker,
-     animated: true,
-     completion: nil)
-     }
-     imagePickerActionSheet.addAction(cameraButton)
-     }
-     // 4
-     let libraryButton = UIAlertAction(title: "Choose Existing",
-     style: .Default) { (alert) -> Void in
-     let imagePicker = UIImagePickerController()
-     imagePicker.delegate = self
-     imagePicker.sourceType = .PhotoLibrary
-     self.presentViewController(imagePicker,
-     animated: true,
-     completion: nil)
-     }
-     imagePickerActionSheet.addAction(libraryButton)
-     // 5
-     let cancelButton = UIAlertAction(title: "Cancel",
-     style: .Cancel) { (alert) -> Void in
-     }
-     imagePickerActionSheet.addAction(cancelButton)
-     // 6
-     presentViewController(imagePickerActionSheet, animated: true,
-     completion: nil)
-     }
+        // 1
+        view.endEditing(true)
+        //moveViewDown()
+        // 2
+        let imagePickerActionSheet = UIAlertController(title: "Snap/Upload Photo",
+            message: nil, preferredStyle: .ActionSheet)
+        // 3
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let cameraButton = UIAlertAction(title: "Take Photo",
+                style: .Default) { (alert) -> Void in
+                    let imagePicker = UIImagePickerController()
+                    self.imagePikerViewController = imagePicker;
+                    imagePicker.delegate = self
+                    imagePicker.sourceType = .Camera
+                    imagePicker.showsCameraControls = false
+                    NSBundle.mainBundle().loadNibNamed("CustomOverLayview", owner: self, options: nil)[0]
+                    self.overlayView.frame = imagePicker.cameraOverlayView!.frame;
+                    self.overlayView.backgroundColor = UIColor.clearColor()
+                    imagePicker.cameraOverlayView = self.overlayView
+                    self.overlayView = nil
+                    self.presentViewController(imagePicker,
+                        animated: true,
+                        completion: nil)
+                    
+                    let line = UIImageView(image:UIImage(named:"scan_line"))
+                    self.line = line
+                    line.frame=CGRectMake(30,10,190,5)
+                    self.pickBg.addSubview(line)
+                    
+                    self.time = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ScanViewController.timerFireMethod), userInfo: nil, repeats: true)
+                    
+            }
+            imagePickerActionSheet.addAction(cameraButton)
+        }
+        // 4
+        let libraryButton = UIAlertAction(title: "Choose Existing",
+            style: .Default) { (alert) -> Void in
+                let imagePicker = UIImagePickerController()
+                imagePicker.delegate = self
+                imagePicker.sourceType = .PhotoLibrary
+                self.presentViewController(imagePicker,
+                    animated: true,
+                    completion: nil)
+        }
+        imagePickerActionSheet.addAction(libraryButton)
+        // 5
+        let cancelButton = UIAlertAction(title: "Cancel",
+            style: .Cancel) { (alert) -> Void in
+        }
+        imagePickerActionSheet.addAction(cancelButton)
+        // 6
+        presentViewController(imagePickerActionSheet, animated: true,
+            completion: nil)
+    }
+
     
-       
+    
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
         
         var scaledSize = CGSizeMake(maxDimension, maxDimension)
@@ -244,6 +270,28 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         //let employeeid = NSCharacterSet.decimalDigitCharacterSet(tesseract.recognizedText);
         // 8
         removeActivityIndicator()
+    }
+    
+    @IBAction func takePicture(sender: AnyObject) {
+        self.imagePikerViewController.takePicture()
+        self.time.invalidate()
+    }
+    
+    @IBAction func cancelTakePicture(sender: AnyObject) {
+        self.time.invalidate()
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func timerFireMethod () {
+        
+        UIView.beginAnimations("animationID", context: nil)
+        
+        UIView.setAnimationDuration(2)
+        UIView.setAnimationCurve(UIViewAnimationCurve.Linear)
+        
+        UIView.setAnimationRepeatCount(100)
+        self.line.frame = CGRectMake(30, 250, 190, 5)
+        UIView.commitAnimations()
     }
 }
 

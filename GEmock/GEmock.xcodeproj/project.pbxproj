@@ -14,6 +14,7 @@
 		054D5E551CC18A880019A940 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D5E511CC18A870019A940 /* Event.swift */; };
 		054D5E561CC18A880019A940 /* AttendanceRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D5E521CC18A870019A940 /* AttendanceRecord+CoreDataProperties.swift */; };
 		054D5E571CC18A880019A940 /* AttendanceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D5E531CC18A870019A940 /* AttendanceRecord.swift */; };
+		055B9B401CC7EC24001D9009 /* CustomOverLayview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055B9B3F1CC7EC24001D9009 /* CustomOverLayview.xib */; };
 		D3C5A54D1CB9985A00134715 /* attendence.csv in Resources */ = {isa = PBXBuildFile; fileRef = D3C5A54C1CB9985A00134715 /* attendence.csv */; };
 		F383C7591CC6A31100C3585B /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F383C7581CC6A31100C3585B /* TesseractOCR.framework */; };
 		F383C75C1CC6A4AD00C3585B /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = F383C75B1CC6A4AD00C3585B /* tessdata */; };
@@ -54,6 +55,7 @@
 		054D5E511CC18A870019A940 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		054D5E521CC18A870019A940 /* AttendanceRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttendanceRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		054D5E531CC18A870019A940 /* AttendanceRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceRecord.swift; sourceTree = "<group>"; };
+		055B9B3F1CC7EC24001D9009 /* CustomOverLayview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverLayview.xib; sourceTree = "<group>"; };
 		D3C5A54C1CB9985A00134715 /* attendence.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = attendence.csv; path = "Supporting Files/attendence.csv"; sourceTree = "<group>"; };
 		F383C7581CC6A31100C3585B /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
 		F383C75B1CC6A4AD00C3585B /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 		F3CAD9E21CADDC420036B8E9 /* GEmock */ = {
 			isa = PBXGroup;
 			children = (
+				055B9B3F1CC7EC24001D9009 /* CustomOverLayview.xib */,
 				F383C75A1CC6A46B00C3585B /* Supporting Files */,
 				F3F34B541CB5741000FD8F70 /* Main.storyboard */,
 				F383C7581CC6A31100C3585B /* TesseractOCR.framework */,
@@ -296,6 +299,7 @@
 				F3CAD9EB1CADDC420036B8E9 /* Assets.xcassets in Resources */,
 				F383C75C1CC6A4AD00C3585B /* tessdata in Resources */,
 				F3F34B561CB5741000FD8F70 /* Main.storyboard in Resources */,
+				055B9B401CC7EC24001D9009 /* CustomOverLayview.xib in Resources */,
 				D3C5A54D1CB9985A00134715 /* attendence.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
