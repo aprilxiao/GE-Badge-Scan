@@ -154,11 +154,11 @@
 		F3CAD9E21CADDC420036B8E9 /* GEmock */ = {
 			isa = PBXGroup;
 			children = (
-				055B9B3F1CC7EC24001D9009 /* CustomOverLayview.xib */,
 				F383C75A1CC6A46B00C3585B /* Supporting Files */,
-				F3F34B541CB5741000FD8F70 /* Main.storyboard */,
 				F383C7581CC6A31100C3585B /* TesseractOCR.framework */,
 				F3F34B571CB5750C00FD8F70 /* Model.xcdatamodeld */,
+				F3F34B541CB5741000FD8F70 /* Main.storyboard */,
+				055B9B3F1CC7EC24001D9009 /* CustomOverLayview.xib */,
 				0539397D1CB45995006D73B5 /* EventTableViewController.swift */,
 				F383C7651CC6A96400C3585B /* ScanViewController.swift */,
 				0539397E1CB45995006D73B5 /* DetailViewController.swift */,

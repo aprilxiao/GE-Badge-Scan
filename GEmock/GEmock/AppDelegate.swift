@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         /* Sleep for 3 seconds before entering the app */
         /* --------------------------- */
-        sleep(1);
+        sleep(2);
         /* --------------------------- */
         return true
     }
