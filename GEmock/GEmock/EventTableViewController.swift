@@ -2,7 +2,7 @@
 //  EventTableViewController.swift
 //  GEmock
 //
-//  Created by user116761 on 4/5/16.
+//  Created by 陈昊 on 4/5/16.
 //  Copyright © 2016 Yushi xiao. All rights reserved.
 //
 
@@ -17,6 +17,10 @@ class EventTableViewController: UITableViewController, NSFetchedResultsControlle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.init(colorLiteralRed: 97/255.0, green: 149/255.0, blue: 192/255.0, alpha: 1)
+        
+        self.tableView.backgroundColor = UIColor.init(colorLiteralRed: 187/255.0, green: 205/255.0, blue: 227/255.0, alpha: 1)
         
         resultsController = NSFetchedResultsController(fetchRequest: fetchRequest(), managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
         resultsController.delegate = self
@@ -58,12 +62,11 @@ class EventTableViewController: UITableViewController, NSFetchedResultsControlle
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+        let cell : UserDataCell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UserDataCell
 
         let event = resultsController.objectAtIndexPath(indexPath) as! Event
-        cell.textLabel?.text = event.name
-        cell.detailTextLabel?.text = event.location
-
+        cell.nameLabel.text = event.name
+        cell.locationLabel.text = event.location
         return cell
     }
 

@@ -37,17 +37,24 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.init(colorLiteralRed: 187/255.0, green: 205/255.0, blue: 227/255.0, alpha: 1)
+        
+        let leftBtn:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        leftBtn.setImage(UIImage.init(imageLiteral: "icon_7"), forState: UIControlState.Normal)
+        leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
+        leftBtn.addTarget(self, action:#selector(ScanViewController.back), forControlEvents: UIControlEvents.TouchUpInside)
+        let leftItem = UIBarButtonItem.init(customView: leftBtn)
+        self.navigationItem.leftBarButtonItem = leftItem;
     }
-    /*override func viewDidAppear(animated: Bool) {
-     super.viewDidAppear(animated)
-     originalTopMargin = topMarginConstraint.constant
-     }*/
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    func back() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
     @IBAction func scanNext(sender: AnyObject) {
         saveRecord();
@@ -91,10 +98,10 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
                 imagePicker.cameraOverlayView = self.overlayView
                 self.overlayView = nil
                 self.presentViewController(imagePicker, animated: true, completion: nil)
-                                                
+                
                 let line = UIImageView(image:UIImage(named:"scan_line"))
                 self.line = line
-                line.frame=CGRectMake(30,10,190,5)
+                line.frame = CGRectMake(self.view.frame.size.width - (self.view.frame.size.width - 60*2) - 60,95,self.view.frame.size.width - 60*2,2)
                 self.pickBg.addSubview(line)
                                                 
                 self.time = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ScanViewController.timerFireMethod), userInfo: nil, repeats: true)
@@ -157,38 +164,7 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         activityIndicator.removeFromSuperview()
         activityIndicator = nil
     }
-    
-    
-    // The remaining methods handle the keyboard resignation/
-    // move the view so that the first responders aren't hidden
-    
-    /*func moveViewUp() {
-     if topMarginConstraint.constant != originalTopMargin {
-     return
-     }
-     
-     topMarginConstraint.constant -= 135
-     UIView.animateWithDuration(0.3, animations: { () -> Void in
-     self.view.layoutIfNeeded()
-     })
-     }
-     
-     func moveViewDown() {
-     if topMarginConstraint.constant == originalTopMargin {
-     return
-     }
-     
-     topMarginConstraint.constant = originalTopMargin
-     UIView.animateWithDuration(0.3, animations: { () -> Void in
-     self.view.layoutIfNeeded()
-     })
-     
-     }*/
-    
-    /*@IBAction func backgroundTapped(sender: AnyObject) {
-     view.endEditing(true)
-     moveViewDown()
-     }*/
+
     
     func performImageRecognition(image: UIImage) {
         // 1
@@ -242,26 +218,12 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         UIView.setAnimationDuration(2)
         UIView.setAnimationCurve(UIViewAnimationCurve.Linear)
         
-        UIView.setAnimationRepeatCount(100)
-        self.line.frame = CGRectMake(30, 250, 190, 5)
+        UIView.setAnimationRepeatCount(9999999)
+        self.line.frame = CGRectMake(self.view.frame.size.width - (self.view.frame.size.width - 60*2) - 60,315,self.view.frame.size.width - 60*2,2)
         UIView.commitAnimations()
     }
 }
 
-/*extension ScanViewController: UITextFieldDelegate {
- func textFieldDidBeginEditing(textField: UITextField) {
- moveViewUp()
- }
- 
- @IBAction func textFieldEndEditing(sender: AnyObject) {
- view.endEditing(true)
- moveViewDown()
- }
- 
- func textViewDidBeginEditing(textView: UITextView) {
- moveViewDown()
- }
- }*/
 
 extension ScanViewController: UIImagePickerControllerDelegate {
     func imagePickerController(picker: UIImagePickerController,

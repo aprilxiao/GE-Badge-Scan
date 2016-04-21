@@ -2,7 +2,7 @@
 //  CreateViewController.swift
 //  GEmock
 //
-//  Created by user116761 on 4/5/16.
+//  Created by 陈昊 on 4/5/16.
 //  Copyright © 2016 Yushi xiao. All rights reserved.
 //
 
@@ -30,7 +30,15 @@ class CreateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.view.backgroundColor = UIColor.init(colorLiteralRed: 187/255.0, green: 205/255.0, blue: 227/255.0, alpha: 1)
+        
+        let leftBtn:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        leftBtn.setImage(UIImage.init(imageLiteral: "icon_7"), forState: UIControlState.Normal)
+        leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
+        leftBtn.addTarget(self, action:#selector(CreateViewController.back), forControlEvents: UIControlEvents.TouchUpInside)
+        let leftItem = UIBarButtonItem.init(customView: leftBtn)
+        self.navigationItem.leftBarButtonItem = leftItem;
         // Do any additional setup after loading the view.
     }
 
@@ -39,7 +47,11 @@ class CreateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func back() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    
     /*
     // MARK: - Navigation
 

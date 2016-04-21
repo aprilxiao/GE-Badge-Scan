@@ -2,7 +2,7 @@
 //  DetailViewController.swift
 //  GEmock
 //
-//  Created by user116761 on 4/5/16.
+//  Created by 陈昊 on 4/5/16.
 //  Copyright © 2016 Yushi xiao. All rights reserved.
 //
 
@@ -126,6 +126,22 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor.init(colorLiteralRed: 187/255.0, green: 205/255.0, blue: 227/255.0, alpha: 1)
+        
+        let rightBtn:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        rightBtn.setImage(UIImage.init(imageLiteral: "icon_fabu"), forState: UIControlState.Normal)
+        rightBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Right
+        rightBtn.addTarget(self, action: #selector(DetailViewController.export(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+        let rightItem = UIBarButtonItem.init(customView: rightBtn)
+        self.navigationItem.rightBarButtonItem = rightItem;
+        
+        let leftBtn:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        leftBtn.setImage(UIImage.init(imageLiteral: "icon_7"), forState: UIControlState.Normal)
+        leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
+        leftBtn.addTarget(self, action: #selector(DetailViewController.back), forControlEvents: UIControlEvents.TouchUpInside)
+        let leftItem = UIBarButtonItem.init(customView: leftBtn)
+        self.navigationItem.leftBarButtonItem = leftItem;
+        
         if event != nil {
             eventName.text = event?.name
             eventLocation.text = event?.location
@@ -138,6 +154,9 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
     }
     
     
+    func back() {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
     
      // MARK: - Navigation
      

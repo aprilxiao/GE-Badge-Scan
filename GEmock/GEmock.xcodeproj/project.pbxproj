@@ -15,7 +15,8 @@
 		054D5E561CC18A880019A940 /* AttendanceRecord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D5E521CC18A870019A940 /* AttendanceRecord+CoreDataProperties.swift */; };
 		054D5E571CC18A880019A940 /* AttendanceRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D5E531CC18A870019A940 /* AttendanceRecord.swift */; };
 		055B9B401CC7EC24001D9009 /* CustomOverLayview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 055B9B3F1CC7EC24001D9009 /* CustomOverLayview.xib */; };
-		899DAE1D1CC7FA9F008768F4 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 899DAE1C1CC7FA9F008768F4 /* images.png */; };
+		56C8B3DD1CCB19F900C927A5 /* UserDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56C8B3DB1CCB19F900C927A5 /* UserDataCell.swift */; };
+		89F33DE51CCE8BF600858491 /* images.png in Resources */ = {isa = PBXBuildFile; fileRef = 89F33DE41CCE8BF600858491 /* images.png */; };
 		D3C5A54D1CB9985A00134715 /* attendence.csv in Resources */ = {isa = PBXBuildFile; fileRef = D3C5A54C1CB9985A00134715 /* attendence.csv */; };
 		F383C7591CC6A31100C3585B /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F383C7581CC6A31100C3585B /* TesseractOCR.framework */; };
 		F383C75C1CC6A4AD00C3585B /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = F383C75B1CC6A4AD00C3585B /* tessdata */; };
@@ -57,7 +58,8 @@
 		054D5E521CC18A870019A940 /* AttendanceRecord+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AttendanceRecord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		054D5E531CC18A870019A940 /* AttendanceRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttendanceRecord.swift; sourceTree = "<group>"; };
 		055B9B3F1CC7EC24001D9009 /* CustomOverLayview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOverLayview.xib; sourceTree = "<group>"; };
-		899DAE1C1CC7FA9F008768F4 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = images.png; path = ../../../images.png; sourceTree = "<group>"; };
+		56C8B3DB1CCB19F900C927A5 /* UserDataCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataCell.swift; sourceTree = "<group>"; };
+		89F33DE41CCE8BF600858491 /* images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = images.png; sourceTree = "<group>"; };
 		D3C5A54C1CB9985A00134715 /* attendence.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = attendence.csv; path = "Supporting Files/attendence.csv"; sourceTree = "<group>"; };
 		F383C7581CC6A31100C3585B /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = "<group>"; };
 		F383C75B1CC6A4AD00C3585B /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
@@ -164,8 +166,9 @@
 				0539397E1CB45995006D73B5 /* DetailViewController.swift */,
 				0539397F1CB45995006D73B5 /* CreateViewController.swift */,
 				F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */,
+				56C8B3DB1CCB19F900C927A5 /* UserDataCell.swift */,
 				F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */,
-				899DAE1C1CC7FA9F008768F4 /* images.png */,
+				89F33DE41CCE8BF600858491 /* images.png */,
 				F3CAD9EC1CADDC420036B8E9 /* LaunchScreen.storyboard */,
 				F3CAD9EF1CADDC420036B8E9 /* Info.plist */,
 				F383C7611CC6A63900C3585B /* GEmock-Bridging-Header.h */,
@@ -302,7 +305,7 @@
 				F3CAD9EB1CADDC420036B8E9 /* Assets.xcassets in Resources */,
 				F383C75C1CC6A4AD00C3585B /* tessdata in Resources */,
 				F3F34B561CB5741000FD8F70 /* Main.storyboard in Resources */,
-				899DAE1D1CC7FA9F008768F4 /* images.png in Resources */,
+				89F33DE51CCE8BF600858491 /* images.png in Resources */,
 				055B9B401CC7EC24001D9009 /* CustomOverLayview.xib in Resources */,
 				D3C5A54D1CB9985A00134715 /* attendence.csv in Resources */,
 			);
@@ -338,6 +341,7 @@
 				054D5E571CC18A880019A940 /* AttendanceRecord.swift in Sources */,
 				F383C7661CC6A96400C3585B /* ScanViewController.swift in Sources */,
 				054D5E551CC18A880019A940 /* Event.swift in Sources */,
+				56C8B3DD1CCB19F900C927A5 /* UserDataCell.swift in Sources */,
 				053939811CB45995006D73B5 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -493,7 +497,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = Hao.GEmock;
+				PRODUCT_BUNDLE_IDENTIFIER = Hao.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GEmock/GEmock-Bridging-Header.h";
@@ -518,7 +522,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = Hao.GEmock;
+				PRODUCT_BUNDLE_IDENTIFIER = Hao.app;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GEmock/GEmock-Bridging-Header.h";
