@@ -212,7 +212,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="320" id="Rqu-BS-pKG"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Scan next"/>
                                 <connections>
                                     <action selector="takePhoto:" destination="qth-gb-SCY" eventType="touchUpInside" id="X0R-XA-Can"/>
@@ -249,7 +249,7 @@
                     <navigationItem key="navigationItem" title="Scan" id="5sa-6Q-pV3">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="LMw-25-Ghu">
                             <connections>
-                                <segue destination="u3z-wx-Cda" kind="push" id="vBh-lQ-TQG"/>
+                                <segue destination="u3z-wx-Cda" kind="showDetail" id="hcd-MP-vjD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -276,7 +276,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GE Affinity Networks Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5D-8b-It6">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="GE Affinity Networks Event" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5D-8b-It6">
                                 <rect key="frame" x="40" y="94" width="520" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="w6W-4L-1Th"/>
@@ -289,13 +289,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FR5-5q-7aF"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
                                 <state key="normal" title="Export"/>
                                 <connections>
                                     <action selector="export:" destination="u3z-wx-Cda" eventType="touchDown" id="Vbc-Dd-kcV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York, NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DF-3I-EGI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="New York, NY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DF-3I-EGI">
                                 <rect key="frame" x="40" y="214" width="520" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="hcH-PQ-0VK"/>
@@ -308,7 +308,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="871-Bj-mru"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                 <state key="normal" title="Scan"/>
                                 <connections>
                                     <segue destination="qth-gb-SCY" kind="show" identifier="scan" id="Y0M-aZ-ui6"/>
@@ -359,6 +359,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="vBh-lQ-TQG"/>
+        <segue reference="hcd-MP-vjD"/>
     </inferredMetricsTieBreakers>
 </document>
