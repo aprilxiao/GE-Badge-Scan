@@ -61,7 +61,7 @@
                         <action selector="cancelTakePicture:" destination="-1" eventType="touchUpInside" id="Xcj-m9-MX1"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" Please Scan Your Card" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgP-AF-S5g">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan The Text Part" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgP-AF-S5g">
                     <rect key="frame" x="0.0" y="360" width="600" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="rO1-7m-IM3"/>

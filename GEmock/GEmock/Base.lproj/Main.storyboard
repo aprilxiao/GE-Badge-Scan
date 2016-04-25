@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--GE Badge Scanner-->
+        <!--Events-->
         <scene sceneID="rZt-0p-HoH">
             <objects>
                 <tableViewController id="yiW-yZ-C5q" customClass="EventTableViewController" customModule="GEmock" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,17 +35,17 @@
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nd1-4b-nDq">
                                             <rect key="frame" x="417" y="8" width="150" height="64"/>
-                                            <color key="backgroundColor" red="0.017979536205530167" green="0.96164911985397339" blue="0.27937376499176025" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" red="0.58966811356541537" green="0.97890520095825195" blue="0.71281824500490076" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="150" id="jSe-bA-kTn"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ0-X6-wnn">
                                             <rect key="frame" x="13" y="13" width="404" height="53"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -79,7 +79,7 @@
                             <outlet property="delegate" destination="yiW-yZ-C5q" id="kGz-yJ-azd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="GE Badge Scanner" id="hcp-Ng-NZg">
+                    <navigationItem key="navigationItem" title="Events" id="hcp-Ng-NZg">
                         <barButtonItem key="backBarButtonItem" title="Back" id="HQL-S5-bYP"/>
                         <barButtonItem key="rightBarButtonItem" image="icon_fabbiao" id="4Fr-1v-axd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -333,7 +333,7 @@
                                     <segue destination="qth-gb-SCY" kind="show" identifier="scan" id="Y0M-aZ-ui6"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gnk-sk-rKm">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnk-sk-rKm">
                                 <rect key="frame" x="20" y="114" width="560" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New York, NY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DF-3I-EGI">
@@ -342,7 +342,7 @@
                                             <constraint firstAttribute="height" constant="50" id="hcH-PQ-0VK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFw-px-8b8">
@@ -358,7 +358,7 @@
                                             <constraint firstAttribute="height" constant="50" id="w6W-4L-1Th"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
