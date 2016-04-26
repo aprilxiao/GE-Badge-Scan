@@ -51,7 +51,7 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
         resultsController.delegate = self
         try! resultsController.performFetch()
         
-        var csv = "id, first, las\n"
+        var csv = "id, first, last\n"
         for record in resultsController.fetchedObjects as! [AttendanceRecord] {
             csv += record.employee_id! + ","
             csv += record.first_name! + ","
