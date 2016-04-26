@@ -9,8 +9,9 @@
 import UIKit
 import MessageUI
 import Foundation
+import CoreData
 
-class DetailViewController: UIViewController, MFMailComposeViewControllerDelegate  {
+class DetailViewController: UIViewController, MFMailComposeViewControllerDelegate, NSFetchedResultsControllerDelegate  {
     //
     private enum MIMEType: String {
         case csv = "text/csv"
@@ -35,33 +36,57 @@ class DetailViewController: UIViewController, MFMailComposeViewControllerDelegat
         }
     }
     
+    
+    let managedObjectContext = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    
+    var resultsController: NSFetchedResultsController = NSFetchedResultsController()
+    
     var event: Event? = nil
     
     @IBOutlet weak var eventLocation: UILabel!
     @IBOutlet weak var eventName: UILabel!
+    
+    func generateEventCSV() -> String {
+        resultsController = NSFetchedResultsController(fetchRequest: fetchRequest(), managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+        resultsController.delegate = self
+        try! resultsController.performFetch()
+        
+        var csv = "id, first, las\n"
+        for record in resultsController.fetchedObjects as! [AttendanceRecord] {
+            csv += record.employee_id! + ","
+            csv += record.first_name! + ","
+            csv += record.last_name! + "\n"
+        }
+        
+        return csv;
+    }
+    
+    func fetchRequest() -> NSFetchRequest {
+        let request = NSFetchRequest(entityName: "AttendanceRecord")
+        let sortDescriptor = NSSortDescriptor(key: "employee_id", ascending: true)
+        request.sortDescriptors = [sortDescriptor]
+        let predicate = NSPredicate(format: "attended = %@", event!)
+        request.predicate = predicate
+        
+        return request
+    }
     
     @IBAction func export(sender: AnyObject) {
     
         
         //Check to see the device can send email.
         if( MFMailComposeViewController.canSendMail() ) {
-            print("Can send email.")
             
             let mailComposer = MFMailComposeViewController()
             mailComposer.mailComposeDelegate = self
             
             //Set the subject and message of the email
-            mailComposer.setSubject("Have you heard a swift?")
-            mailComposer.setMessageBody("This is what they sound like.", isHTML: false)
+            mailComposer.setSubject("Attendance data for " + (event?.name)!)
+            mailComposer.setMessageBody("", isHTML: false)
             
-            if let filePath = NSBundle.mainBundle().pathForResource("attendence", ofType: "csv") {
-                print("File path loaded.")
-                
-                if let fileData = NSData(contentsOfFile: filePath) {
-                    print("File data loaded.")
-                    mailComposer.addAttachmentData(fileData, mimeType: "csv", fileName: "attendence")
-                }
-            }
+            let csvString = generateEventCSV()
+            mailComposer.addAttachmentData(csvString.dataUsingEncoding(NSUTF8StringEncoding)!, mimeType: "csv", fileName: "attendence.csv")
+            
             self.presentViewController(mailComposer, animated: true, completion: nil)
         }
     }
