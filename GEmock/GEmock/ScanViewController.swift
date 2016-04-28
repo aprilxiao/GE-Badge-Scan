@@ -45,6 +45,8 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         leftBtn.addTarget(self, action:#selector(ScanViewController.back), forControlEvents: UIControlEvents.TouchUpInside)
         let leftItem = UIBarButtonItem.init(customView: leftBtn)
         self.navigationItem.leftBarButtonItem = leftItem;
+        
+        self.eventName.text = event?.name
     }
 
     override func didReceiveMemoryWarning() {
@@ -222,6 +224,11 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         self.line.frame = CGRectMake(self.view.frame.size.width - (self.view.frame.size.width - 60*2) - 60,315,self.view.frame.size.width - 60*2,2)
         UIView.commitAnimations()
     }
+    
+    @IBAction func save(sender: AnyObject) {
+        self.back()
+    }
+    
 }
 
 

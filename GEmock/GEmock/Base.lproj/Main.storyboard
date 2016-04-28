@@ -40,11 +40,11 @@
                                                 <constraint firstAttribute="width" constant="150" id="jSe-bA-kTn"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                            <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                            <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fZ0-X6-wnn">
-                                            <rect key="frame" x="13" y="13" width="404" height="53"/>
+                                            <rect key="frame" x="13" y="8" width="404" height="63"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <nil key="highlightedColor"/>
@@ -58,9 +58,9 @@
                                         <constraint firstItem="u3l-OZ-Apj" firstAttribute="top" secondItem="3md-zQ-ssd" secondAttribute="topMargin" constant="-8" id="Faz-BG-dqq"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="u3l-OZ-Apj" secondAttribute="trailing" constant="-5" id="PUQ-ZL-WXQ"/>
                                         <constraint firstItem="Nd1-4b-nDq" firstAttribute="leading" secondItem="fZ0-X6-wnn" secondAttribute="trailing" id="VtQ-hJ-hp2"/>
-                                        <constraint firstItem="fZ0-X6-wnn" firstAttribute="top" secondItem="3md-zQ-ssd" secondAttribute="topMargin" constant="5" id="cRP-El-VNg"/>
+                                        <constraint firstItem="fZ0-X6-wnn" firstAttribute="top" secondItem="3md-zQ-ssd" secondAttribute="topMargin" id="cRP-El-VNg"/>
                                         <constraint firstItem="u3l-OZ-Apj" firstAttribute="leading" secondItem="3md-zQ-ssd" secondAttribute="leadingMargin" constant="-5" id="gIM-tf-Mpe"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="fZ0-X6-wnn" secondAttribute="bottom" constant="5" id="hr1-Dg-QZa"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="fZ0-X6-wnn" secondAttribute="bottom" id="hr1-Dg-QZa"/>
                                         <constraint firstItem="Acg-jj-yWd" firstAttribute="centerY" secondItem="u3l-OZ-Apj" secondAttribute="centerY" id="jYy-sE-I22"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="u3l-OZ-Apj" secondAttribute="bottom" constant="-8" id="si5-X3-X3g"/>
                                         <constraint firstItem="Acg-jj-yWd" firstAttribute="leading" secondItem="Nd1-4b-nDq" secondAttribute="trailing" constant="10" id="xLf-gV-EHR"/>
@@ -295,7 +295,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="LMw-25-Ghu">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="u3z-wx-Cda" kind="showDetail" id="hcd-MP-vjD"/>
+                                <action selector="save:" destination="qth-gb-SCY" id="3ln-Tl-uhK"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -308,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ozo-F5-1y7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="387" y="1113"/>
+            <point key="canvasLocation" x="300" y="1118"/>
         </scene>
         <!--CE Badge Scanner-->
         <scene sceneID="t0t-hY-wNg">
@@ -342,7 +342,7 @@
                                             <constraint firstAttribute="height" constant="50" id="hcH-PQ-0VK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sFw-px-8b8">
@@ -358,7 +358,7 @@
                                             <constraint firstAttribute="height" constant="50" id="w6W-4L-1Th"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                        <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -426,7 +426,4 @@
         <image name="icon_fabbiao" width="21" height="21"/>
         <image name="rightArrow" width="5" height="8"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="pw4-9S-R9Z"/>
-    </inferredMetricsTieBreakers>
 </document>
