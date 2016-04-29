@@ -226,6 +226,7 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     }
     
     @IBAction func save(sender: AnyObject) {
+        saveRecord();
         self.back()
     }
     
