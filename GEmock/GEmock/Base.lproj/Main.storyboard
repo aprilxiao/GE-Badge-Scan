@@ -9,13 +9,13 @@
         <!--Events-->
         <scene sceneID="rZt-0p-HoH">
             <objects>
-                <tableViewController id="yiW-yZ-C5q" customClass="EventTableViewController" customModule="GEmock" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yiW-yZ-C5q" customClass="EventTableViewController" customModule="BadgeScan" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="pwa-Ys-fEa">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="yLJ-1o-4Fa" customClass="UserDataCell" customModule="GEmock" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="80" id="yLJ-1o-4Fa" customClass="UserDataCell" customModule="BadgeScan" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="600" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yLJ-1o-4Fa" id="3md-zQ-ssd">
@@ -96,7 +96,7 @@
         <!--Create an event-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="CreateViewController" customModule="GEmock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CreateViewController" customModule="BadgeScan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Eir-tN-nO1"/>
                         <viewControllerLayoutGuide type="bottom" id="3n1-J9-gr6"/>
@@ -175,7 +175,7 @@
         <!--Scan-->
         <scene sceneID="kQQ-8H-VMw">
             <objects>
-                <viewController id="qth-gb-SCY" customClass="ScanViewController" customModule="GEmock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qth-gb-SCY" customClass="ScanViewController" customModule="BadgeScan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aJy-L6-r1C"/>
                         <viewControllerLayoutGuide type="bottom" id="Dt1-TE-Td5"/>
@@ -292,7 +292,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Scan" id="5sa-6Q-pV3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LMw-25-Ghu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="LMw-25-Ghu">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="save:" destination="qth-gb-SCY" id="3ln-Tl-uhK"/>
@@ -310,10 +310,10 @@
             </objects>
             <point key="canvasLocation" x="300" y="1118"/>
         </scene>
-        <!--CE Badge Scanner-->
+        <!--GE Badge Scanner-->
         <scene sceneID="t0t-hY-wNg">
             <objects>
-                <viewController id="u3z-wx-Cda" customClass="DetailViewController" customModule="GEmock" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="u3z-wx-Cda" customClass="DetailViewController" customModule="BadgeScan" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ru9-8w-xcj"/>
                         <viewControllerLayoutGuide type="bottom" id="3Th-QU-VJW"/>
@@ -392,7 +392,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gnk-sk-rKm" secondAttribute="trailing" id="zgS-58-jmO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CE Badge Scanner" id="TZf-xs-d8x"/>
+                    <navigationItem key="navigationItem" title="GE Badge Scanner" id="TZf-xs-d8x"/>
                     <connections>
                         <outlet property="eventLocation" destination="4DF-3I-EGI" id="mub-yL-ypj"/>
                         <outlet property="eventName" destination="m5D-8b-It6" id="gyp-oI-Khj"/>

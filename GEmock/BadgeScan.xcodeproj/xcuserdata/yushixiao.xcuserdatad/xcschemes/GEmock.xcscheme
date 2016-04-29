@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F3CAD9DF1CADDC420036B8E9"
-               BuildableName = "GEmock.app"
-               BlueprintName = "GEmock"
-               ReferencedContainer = "container:GEmock.xcodeproj">
+               BuildableName = "BadgeScan.app"
+               BlueprintName = "BadgeScan"
+               ReferencedContainer = "container:BadgeScan.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F3CAD9F31CADDC420036B8E9"
-               BuildableName = "GEmockTests.xctest"
-               BlueprintName = "GEmockTests"
-               ReferencedContainer = "container:GEmock.xcodeproj">
+               BuildableName = "BadgeScan.xctest"
+               BlueprintName = "BadgeScanTests"
+               ReferencedContainer = "container:BadgeScan.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F3CAD9FE1CADDC420036B8E9"
-               BuildableName = "GEmockUITests.xctest"
-               BlueprintName = "GEmockUITests"
-               ReferencedContainer = "container:GEmock.xcodeproj">
+               BuildableName = "BadgeScan.xctest"
+               BlueprintName = "BadgeScanUITests"
+               ReferencedContainer = "container:BadgeScan.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F3CAD9DF1CADDC420036B8E9"
-            BuildableName = "GEmock.app"
-            BlueprintName = "GEmock"
-            ReferencedContainer = "container:GEmock.xcodeproj">
+            BuildableName = "BadgeScan.app"
+            BlueprintName = "BadgeScan"
+            ReferencedContainer = "container:BadgeScan.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F3CAD9DF1CADDC420036B8E9"
-            BuildableName = "GEmock.app"
-            BlueprintName = "GEmock"
-            ReferencedContainer = "container:GEmock.xcodeproj">
+            BuildableName = "BadgeScan.app"
+            BlueprintName = "BadgeScan"
+            ReferencedContainer = "container:BadgeScan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F3CAD9DF1CADDC420036B8E9"
-            BuildableName = "GEmock.app"
-            BlueprintName = "GEmock"
-            ReferencedContainer = "container:GEmock.xcodeproj">
+            BuildableName = "BadgeScan.app"
+            BlueprintName = "BadgeScan"
+            ReferencedContainer = "container:BadgeScan.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
