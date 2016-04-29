@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZdJ-Sm-dIs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZdJ-Sm-dIs">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -292,7 +292,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Scan" id="5sa-6Q-pV3">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="LMw-25-Ghu">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="LMw-25-Ghu">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="save:" destination="qth-gb-SCY" id="3ln-Tl-uhK"/>
@@ -310,7 +310,7 @@
             </objects>
             <point key="canvasLocation" x="300" y="1118"/>
         </scene>
-        <!--CE Badge Scanner-->
+        <!--GE Badge Scanner-->
         <scene sceneID="t0t-hY-wNg">
             <objects>
                 <viewController id="u3z-wx-Cda" customClass="DetailViewController" customModule="GEmock" customModuleProvider="target" sceneMemberID="viewController">
@@ -392,7 +392,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="gnk-sk-rKm" secondAttribute="trailing" id="zgS-58-jmO"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="CE Badge Scanner" id="TZf-xs-d8x"/>
+                    <navigationItem key="navigationItem" title="GE Badge Scanner" id="TZf-xs-d8x"/>
                     <connections>
                         <outlet property="eventLocation" destination="4DF-3I-EGI" id="mub-yL-ypj"/>
                         <outlet property="eventName" destination="m5D-8b-It6" id="gyp-oI-Khj"/>
