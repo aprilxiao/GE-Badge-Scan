@@ -221,7 +221,7 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         UIView.setAnimationCurve(UIViewAnimationCurve.Linear)
         
         UIView.setAnimationRepeatCount(9999999)
-        self.line.frame = CGRectMake(self.view.frame.size.width - (self.view.frame.size.width - 60*2) - 60,315,self.view.frame.size.width - 60*2,2)
+        self.line.frame = CGRectMake(self.view.frame.size.width - (self.view.frame.size.width - 60*2) - 60,280,self.view.frame.size.width - 60*2,2)
         UIView.commitAnimations()
     }
     

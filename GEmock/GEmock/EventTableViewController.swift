@@ -18,6 +18,12 @@ class EventTableViewController: UITableViewController, NSFetchedResultsControlle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let leftBtn:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
+        leftBtn.setImage(UIImage.init(imageLiteral: "logo"), forState: UIControlState.Normal)
+        leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignment.Left
+        let leftItem = UIBarButtonItem.init(customView: leftBtn)
+        self.navigationItem.leftBarButtonItem = leftItem;
+        
         self.navigationController?.navigationBar.barTintColor = UIColor.init(colorLiteralRed: 97/255.0, green: 149/255.0, blue: 192/255.0, alpha: 1)
         
         self.tableView.backgroundColor = UIColor.init(colorLiteralRed: 187/255.0, green: 205/255.0, blue: 227/255.0, alpha: 1)
