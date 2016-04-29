@@ -79,6 +79,9 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
 
 
     @IBAction func takePhoto(sender: AnyObject) {
+        emloyeeId.text = ""
+        firstName.text = ""
+        lastName.text = ""
         // 1
         view.endEditing(true)
         //moveViewDown()
