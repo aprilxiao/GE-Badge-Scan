@@ -497,13 +497,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
-<<<<<<< HEAD:GEmock/BadgeScan.xcodeproj/project.pbxproj
 				PRODUCT_BUNDLE_IDENTIFIER = yushi.ge;
 				PRODUCT_NAME = BadgeScan;
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = Hao.ge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
->>>>>>> origin/master:GEmock/GEmock.xcodeproj/project.pbxproj
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GEmock/GEmock-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -527,13 +522,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
-<<<<<<< HEAD:GEmock/BadgeScan.xcodeproj/project.pbxproj
 				PRODUCT_BUNDLE_IDENTIFIER = yushi.ge;
 				PRODUCT_NAME = BadgeScan;
-=======
-				PRODUCT_BUNDLE_IDENTIFIER = Hao.ge;
-				PRODUCT_NAME = "$(TARGET_NAME)";
->>>>>>> origin/master:GEmock/GEmock.xcodeproj/project.pbxproj
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GEmock/GEmock-Bridging-Header.h";
 			};
