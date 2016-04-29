@@ -83,12 +83,12 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         view.endEditing(true)
         //moveViewDown()
         // 2
-        let imagePickerActionSheet = UIAlertController(title: "Snap Photo",
-                                                       message: nil, preferredStyle: .ActionSheet)
+        //let imagePickerActionSheet = UIAlertController(title: "Snap Photo",
+                                                       //message: nil, preferredStyle: .ActionSheet)
         // 3
         if UIImagePickerController.isSourceTypeAvailable(.Camera) {
-            let cameraButton = UIAlertAction(title: "Take Photo", style: .Default) {
-                (alert) -> Void in
+            //let cameraButton = UIAlertAction(title: "Take Photo", style: .Default) {
+                //(alert) -> Void in
                 let imagePicker = UIImagePickerController()
                 self.imagePikerViewController = imagePicker;
                 imagePicker.delegate = self
@@ -107,8 +107,8 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
                 self.pickBg.addSubview(line)
                                                 
                 self.time = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ScanViewController.timerFireMethod), userInfo: nil, repeats: true)
-            }
-            imagePickerActionSheet.addAction(cameraButton)
+           //}
+            //imagePickerActionSheet.addAction(cameraButton)
         }
         // 4
 //        let libraryButton = UIAlertAction(title: "Choose Existing", style: .Default) {
@@ -120,11 +120,11 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
 //        }
 //        imagePickerActionSheet.addAction(libraryButton)
         // 5
-        let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel) { (alert) -> Void in
-        }
-        imagePickerActionSheet.addAction(cancelButton)
+        //let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel) { (alert) -> Void in
+        //}
+        //imagePickerActionSheet.addAction(cancelButton)
         // 6
-        presentViewController(imagePickerActionSheet, animated: true, completion: nil)
+        //presentViewController(imagePickerActionSheet, animated: true, completion: nil)
         
     }
     
