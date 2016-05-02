@@ -1,5 +1,5 @@
 # GE Badge Scanning App
-![App screenshot](https://raw.githubusercontent.com/aprilxiao/GE-Badge-Scan/master/screenshot.png "")
+![App screenshot](https://raw.githubusercontent.com/aprilxiao/GE-Badge-Scan/master/screenshot.png =375x)
 
 ## Summary
 The GE Badge Scanning App scans and stores employee badges for attendnace-tracking purposes. This data can be exported via email in a CSV format.
