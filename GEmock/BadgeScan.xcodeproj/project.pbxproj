@@ -67,15 +67,15 @@
 		F383C75F1CC6A58400C3585B /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		F383C7611CC6A63900C3585B /* GEmock-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GEmock-Bridging-Header.h"; sourceTree = "<group>"; };
 		F383C7651CC6A96400C3585B /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
-		F3CAD9E01CADDC420036B8E9 /* GEmock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEmock.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CAD9E01CADDC420036B8E9 /* BadgeScan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BadgeScan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CAD9E31CADDC420036B8E9 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3CAD9EA1CADDC420036B8E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3CAD9ED1CADDC420036B8E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3CAD9EF1CADDC420036B8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3CAD9F41CADDC420036B8E9 /* GEmockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEmockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CAD9F41CADDC420036B8E9 /* BadgeScan.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadgeScan.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CAD9F81CADDC420036B8E9 /* GEmockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEmockTests.swift; sourceTree = "<group>"; };
 		F3CAD9FA1CADDC420036B8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F3CAD9FF1CADDC420036B8E9 /* GEmockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEmockUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3CAD9FF1CADDC420036B8E9 /* BadgeScan.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BadgeScan.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CADA031CADDC420036B8E9 /* GEmockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEmockUITests.swift; sourceTree = "<group>"; };
 		F3CADA051CADDC420036B8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3F34B551CB5741000FD8F70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,9 +146,9 @@
 		F3CAD9E11CADDC420036B8E9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F3CAD9E01CADDC420036B8E9 /* GEmock.app */,
-				F3CAD9F41CADDC420036B8E9 /* GEmockTests.xctest */,
-				F3CAD9FF1CADDC420036B8E9 /* GEmockUITests.xctest */,
+				F3CAD9E01CADDC420036B8E9 /* BadgeScan.app */,
+				F3CAD9F41CADDC420036B8E9 /* BadgeScan.xctest */,
+				F3CAD9FF1CADDC420036B8E9 /* BadgeScan.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -197,9 +197,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F3CAD9DF1CADDC420036B8E9 /* GEmock */ = {
+		F3CAD9DF1CADDC420036B8E9 /* BadgeScan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3CADA081CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "GEmock" */;
+			buildConfigurationList = F3CADA081CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "BadgeScan" */;
 			buildPhases = (
 				F3CAD9DC1CADDC420036B8E9 /* Sources */,
 				F3CAD9DD1CADDC420036B8E9 /* Frameworks */,
@@ -209,14 +209,14 @@
 			);
 			dependencies = (
 			);
-			name = GEmock;
+			name = BadgeScan;
 			productName = GEmock;
-			productReference = F3CAD9E01CADDC420036B8E9 /* GEmock.app */;
+			productReference = F3CAD9E01CADDC420036B8E9 /* BadgeScan.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F3CAD9F31CADDC420036B8E9 /* GEmockTests */ = {
+		F3CAD9F31CADDC420036B8E9 /* BadgeScanTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3CADA0B1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "GEmockTests" */;
+			buildConfigurationList = F3CADA0B1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "BadgeScanTests" */;
 			buildPhases = (
 				F3CAD9F01CADDC420036B8E9 /* Sources */,
 				F3CAD9F11CADDC420036B8E9 /* Frameworks */,
@@ -227,14 +227,14 @@
 			dependencies = (
 				F3CAD9F61CADDC420036B8E9 /* PBXTargetDependency */,
 			);
-			name = GEmockTests;
+			name = BadgeScanTests;
 			productName = GEmockTests;
-			productReference = F3CAD9F41CADDC420036B8E9 /* GEmockTests.xctest */;
+			productReference = F3CAD9F41CADDC420036B8E9 /* BadgeScan.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F3CAD9FE1CADDC420036B8E9 /* GEmockUITests */ = {
+		F3CAD9FE1CADDC420036B8E9 /* BadgeScanUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F3CADA0E1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "GEmockUITests" */;
+			buildConfigurationList = F3CADA0E1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "BadgeScanUITests" */;
 			buildPhases = (
 				F3CAD9FB1CADDC420036B8E9 /* Sources */,
 				F3CAD9FC1CADDC420036B8E9 /* Frameworks */,
@@ -245,9 +245,9 @@
 			dependencies = (
 				F3CADA011CADDC420036B8E9 /* PBXTargetDependency */,
 			);
-			name = GEmockUITests;
+			name = BadgeScanUITests;
 			productName = GEmockUITests;
-			productReference = F3CAD9FF1CADDC420036B8E9 /* GEmockUITests.xctest */;
+			productReference = F3CAD9FF1CADDC420036B8E9 /* BadgeScan.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -262,7 +262,7 @@
 				TargetAttributes = {
 					F3CAD9DF1CADDC420036B8E9 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = N4MFK7KF2J;
+						DevelopmentTeam = 2947US2W32;
 					};
 					F3CAD9F31CADDC420036B8E9 = {
 						CreatedOnToolsVersion = 7.3;
@@ -276,7 +276,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F3CAD9DB1CADDC420036B8E9 /* Build configuration list for PBXProject "GEmock" */;
+			buildConfigurationList = F3CAD9DB1CADDC420036B8E9 /* Build configuration list for PBXProject "BadgeScan" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -289,9 +289,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F3CAD9DF1CADDC420036B8E9 /* GEmock */,
-				F3CAD9F31CADDC420036B8E9 /* GEmockTests */,
-				F3CAD9FE1CADDC420036B8E9 /* GEmockUITests */,
+				F3CAD9DF1CADDC420036B8E9 /* BadgeScan */,
+				F3CAD9F31CADDC420036B8E9 /* BadgeScanTests */,
+				F3CAD9FE1CADDC420036B8E9 /* BadgeScanUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -367,12 +367,12 @@
 /* Begin PBXTargetDependency section */
 		F3CAD9F61CADDC420036B8E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F3CAD9DF1CADDC420036B8E9 /* GEmock */;
+			target = F3CAD9DF1CADDC420036B8E9 /* BadgeScan */;
 			targetProxy = F3CAD9F51CADDC420036B8E9 /* PBXContainerItemProxy */;
 		};
 		F3CADA011CADDC420036B8E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F3CAD9DF1CADDC420036B8E9 /* GEmock */;
+			target = F3CAD9DF1CADDC420036B8E9 /* BadgeScan */;
 			targetProxy = F3CADA001CADDC420036B8E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -497,8 +497,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = Hao.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = yushi.ge;
+				PRODUCT_NAME = BadgeScan;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GEmock/GEmock-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -522,8 +522,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = Hao.app;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = yushi.ge;
+				PRODUCT_NAME = BadgeScan;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GEmock/GEmock-Bridging-Header.h";
 			};
@@ -536,8 +536,8 @@
 				INFOPLIST_FILE = GEmockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.GEmockTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEmock.app/GEmock";
+				PRODUCT_NAME = BadgeScan;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BadgeScan.app/BadgeScan";
 			};
 			name = Debug;
 		};
@@ -548,8 +548,8 @@
 				INFOPLIST_FILE = GEmockTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.GEmockTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEmock.app/GEmock";
+				PRODUCT_NAME = BadgeScan;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BadgeScan.app/BadgeScan";
 			};
 			name = Release;
 		};
@@ -559,7 +559,7 @@
 				INFOPLIST_FILE = GEmockUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.GEmockUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BadgeScan;
 				TEST_TARGET_NAME = GEmock;
 			};
 			name = Debug;
@@ -570,7 +570,7 @@
 				INFOPLIST_FILE = GEmockUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.GEmockUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = BadgeScan;
 				TEST_TARGET_NAME = GEmock;
 			};
 			name = Release;
@@ -578,7 +578,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F3CAD9DB1CADDC420036B8E9 /* Build configuration list for PBXProject "GEmock" */ = {
+		F3CAD9DB1CADDC420036B8E9 /* Build configuration list for PBXProject "BadgeScan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3CADA061CADDC420036B8E9 /* Debug */,
@@ -587,7 +587,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3CADA081CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "GEmock" */ = {
+		F3CADA081CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "BadgeScan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3CADA091CADDC420036B8E9 /* Debug */,
@@ -596,7 +596,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3CADA0B1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "GEmockTests" */ = {
+		F3CADA0B1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "BadgeScanTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3CADA0C1CADDC420036B8E9 /* Debug */,
@@ -605,7 +605,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F3CADA0E1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "GEmockUITests" */ = {
+		F3CADA0E1CADDC420036B8E9 /* Build configuration list for PBXNativeTarget "BadgeScanUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F3CADA0F1CADDC420036B8E9 /* Debug */,
