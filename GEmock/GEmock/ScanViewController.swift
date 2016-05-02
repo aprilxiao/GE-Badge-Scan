@@ -57,10 +57,18 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     func back() {
         self.navigationController?.popViewControllerAnimated(true)
     }
-    
+    /*
     @IBAction func scanNext(sender: AnyObject) {
         saveRecord();
     }
+    */
+    
+
+
+    @IBAction func Confirm(sender: AnyObject) {
+        saveRecord();
+    }
+
     
     func saveRecord() {
         let description = NSEntityDescription.entityForName("AttendanceRecord", inManagedObjectContext: managedObjectContext)
