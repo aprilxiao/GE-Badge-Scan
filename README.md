@@ -26,7 +26,8 @@ Since the app is not on the App Store, installing it on an iPhone requires a dev
 * While in the main dashboard, tap the top right corner of the screen to add a new event.
 * Select an event from the dashboard list in order to scan or export data.
 * In an event page, tap the large blue button to scan badges.
-* Tap "Scan next" to scan a badge. Once the photo is taken, the app will take a second to process it, after which the read data will appear in the fields on the screen.
+* Tap "Take Photo" to scan a badge. Once the photo is taken, the app will take a second to process it, after which the read data will appear in the fields on the screen. 
 * Depending on the properties of the photo, the scan can fail. If necessary, fix the data displayed on the screen.
-* Tap "Scan next" to save and scan another badge, or "Save" in the top-right corner of the screen to exit scanning.
+* Tap "Confirm" to store the information.
+* Tap "Take Photo" to scan another badge, or "Done" in the top-right corner of the screen to exit scanning.
 * In an event page, tap the button at the top-right of the screen to export attendance data for that event.
