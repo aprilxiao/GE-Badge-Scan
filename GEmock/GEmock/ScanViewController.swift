@@ -237,7 +237,9 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     }
     
     @IBAction func save(sender: AnyObject) {
-        saveRecord();
+        if emloyeeId.text != "" || firstName.text != "" || lastName.text != ""{
+            saveRecord()
+        }
         self.back()
     }
     

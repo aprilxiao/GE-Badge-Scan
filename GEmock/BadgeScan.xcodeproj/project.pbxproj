@@ -262,7 +262,7 @@
 				TargetAttributes = {
 					F3CAD9DF1CADDC420036B8E9 = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 6XPZNHJSFZ;
+						DevelopmentTeam = 2947US2W32;
 					};
 					F3CAD9F31CADDC420036B8E9 = {
 						CreatedOnToolsVersion = 7.3;
@@ -497,7 +497,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = HaoChen.app;
+				PRODUCT_BUNDLE_IDENTIFIER = yushi.ge;
 				PRODUCT_NAME = BadgeScan;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GEmock/GEmock-Bridging-Header.h";
@@ -522,7 +522,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-lstdc++";
-				PRODUCT_BUNDLE_IDENTIFIER = HaoChen.app;
+				PRODUCT_BUNDLE_IDENTIFIER = yushi.ge;
 				PRODUCT_NAME = BadgeScan;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "GEmock/GEmock-Bridging-Header.h";
