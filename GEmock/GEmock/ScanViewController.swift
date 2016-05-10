@@ -10,8 +10,9 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     @IBOutlet weak var emloyeeId: UITextField!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
     @IBOutlet weak var eventName: UILabel!
+    
+    @IBOutlet weak var topMarginConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var overlayView: UIView!
     
@@ -33,6 +34,8 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set up UI including back button
         self.view.backgroundColor = UIColor.init(colorLiteralRed: 187/255.0, green: 205/255.0, blue: 227/255.0, alpha: 1)
         
         let leftBtn:UIButton = UIButton(frame: CGRect(x: 0, y: 0, width: 50, height: 40))
@@ -44,29 +47,19 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         
         self.eventName.text = event?.name
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func back() {
         self.navigationController?.popViewControllerAnimated(true)
     }
-    /*
-    @IBAction func scanNext(sender: AnyObject) {
-        saveRecord();
-    }
-    */
     
-
-
+    
     @IBAction func Confirm(sender: AnyObject) {
         saveRecord();
     }
-
+    
     
     func saveRecord() {
+        // Save the record to the database
         let description = NSEntityDescription.entityForName("AttendanceRecord", inManagedObjectContext: managedObjectContext)
         let record = AttendanceRecord(entity: description!, insertIntoManagedObjectContext: managedObjectContext)
         record.attended = event
@@ -75,69 +68,45 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         record.last_name = lastName.text
         try! managedObjectContext.save()
         
+        // Afterwards, clear the fields
         emloyeeId.text = ""
         firstName.text = ""
         lastName.text = ""
     }
     
-
-
+    
     @IBAction func takePhoto(sender: AnyObject) {
         emloyeeId.text = ""
         firstName.text = ""
         lastName.text = ""
-        // 1
-        view.endEditing(true)
-        //moveViewDown()
-        // 2
-        //let imagePickerActionSheet = UIAlertController(title: "Snap Photo",
-                                                       //message: nil, preferredStyle: .ActionSheet)
-        // 3
-        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
-            //let cameraButton = UIAlertAction(title: "Take Photo", style: .Default) {
-                //(alert) -> Void in
-                let imagePicker = UIImagePickerController()
-                self.imagePikerViewController = imagePicker;
-                imagePicker.delegate = self
-                imagePicker.sourceType = .Camera
-                imagePicker.showsCameraControls = false
-                NSBundle.mainBundle().loadNibNamed("CustomOverLayview", owner: self, options: nil)[0]
-                self.overlayView.frame = imagePicker.cameraOverlayView!.frame;
-                self.overlayView.backgroundColor = UIColor.clearColor()
-                imagePicker.cameraOverlayView = self.overlayView
-                self.overlayView = nil
-                self.presentViewController(imagePicker, animated: true, completion: nil)
-                
-                let line = UIImageView(image:UIImage(named:"scan_line"))
-                self.line = line
-                line.frame = CGRectMake(self.view.frame.size.width - (self.view.frame.size.width - 60*2) - 60,95,self.view.frame.size.width - 60*2,2)
-                self.pickBg.addSubview(line)
-                                                
-                self.time = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ScanViewController.timerFireMethod), userInfo: nil, repeats: true)
-           //}
-            //imagePickerActionSheet.addAction(cameraButton)
-        }
-        // 4
-//        let libraryButton = UIAlertAction(title: "Choose Existing", style: .Default) {
-//            (alert) -> Void in
-//            let imagePicker = UIImagePickerController()
-//            imagePicker.delegate = self
-//            imagePicker.sourceType = .PhotoLibrary
-//            self.presentViewController(imagePicker, animated: true, completion: nil)
-//        }
-//        imagePickerActionSheet.addAction(libraryButton)
-        // 5
-        //let cancelButton = UIAlertAction(title: "Cancel", style: .Cancel) { (alert) -> Void in
-        //}
-        //imagePickerActionSheet.addAction(cancelButton)
-        // 6
-        //presentViewController(imagePickerActionSheet, animated: true, completion: nil)
         
+        view.endEditing(true)
+        
+        // Set up scan interface
+        if UIImagePickerController.isSourceTypeAvailable(.Camera) {
+            let imagePicker = UIImagePickerController()
+            self.imagePikerViewController = imagePicker;
+            imagePicker.delegate = self
+            imagePicker.sourceType = .Camera
+            imagePicker.showsCameraControls = false
+            NSBundle.mainBundle().loadNibNamed("CustomOverLayview", owner: self, options: nil)[0]
+            self.overlayView.frame = imagePicker.cameraOverlayView!.frame;
+            self.overlayView.backgroundColor = UIColor.clearColor()
+            imagePicker.cameraOverlayView = self.overlayView
+            self.overlayView = nil
+            self.presentViewController(imagePicker, animated: true, completion: nil)
+            
+            let line = UIImageView(image:UIImage(named:"scan_line"))
+            self.line = line
+            line.frame = CGRectMake(self.view.frame.size.width - (self.view.frame.size.width - 60*2) - 60,95,self.view.frame.size.width - 60*2,2)
+            self.pickBg.addSubview(line)
+            
+            self.time = NSTimer.scheduledTimerWithTimeInterval(2, target: self, selector: #selector(ScanViewController.timerFireMethod), userInfo: nil, repeats: true)
+        }
     }
     
-    
+    // Scale the image to the desired dimensions
     func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
-        
         var scaledSize = CGSizeMake(maxDimension, maxDimension)
         var scaleFactor:CGFloat
         
@@ -173,27 +142,27 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         activityIndicator.removeFromSuperview()
         activityIndicator = nil
     }
-
     
+    // Do OCR using Tessereact
     func performImageRecognition(image: UIImage) {
-        // 1
         let tesseract = G8Tesseract()
-        // 2
         tesseract.language = "eng"
-        // 3
         tesseract.engineMode = .TesseractCubeCombined
-        // 4
         tesseract.pageSegmentationMode = .Auto
-        // 5
         tesseract.maximumRecognitionTime = 60.0
-        // 6
         tesseract.image = image.g8_blackAndWhite()
         tesseract.recognize()
-        // 7
+        
         eventName.text = event!.name
+        
+        // Get recognized text from image
         let data = String(tesseract.recognizedText)
+        
+        // Split by lines and exclude empty lines
         var myStrings = data.componentsSeparatedByCharactersInSet(NSCharacterSet.newlineCharacterSet())
         myStrings = myStrings.filter({$0 != ""})
+        
+        // Find line that is numbers: employee ID
         var idPosition = 0
         for (index,line) in myStrings.enumerate(){
             if let nineDigit = Int(line) {
@@ -201,12 +170,13 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
                 idPosition = index
             }
         }
+        
+        // First and last names are immediately after emplyoee ID
         if idPosition >= 2 {
             firstName.text = myStrings[idPosition - 2]
             lastName.text = myStrings[idPosition - 1]
         }
-        //let employeeid = NSCharacterSet.decimalDigitCharacterSet(tesseract.recognizedText);
-        // 8
+        
         removeActivityIndicator()
     }
     
@@ -220,8 +190,8 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    // Perform scanning animation
     func timerFireMethod () {
-        
         UIView.beginAnimations("animationID", context: nil)
         
         UIView.setAnimationDuration(2)
@@ -232,6 +202,7 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
         UIView.commitAnimations()
     }
     
+    // Save fields if not empty
     @IBAction func save(sender: AnyObject) {
         if emloyeeId.text != "" || firstName.text != "" || lastName.text != ""{
             saveRecord()
@@ -243,6 +214,7 @@ class ScanViewController: UIViewController, UITextViewDelegate, UINavigationCont
 
 
 extension ScanViewController: UIImagePickerControllerDelegate {
+    // When photo is taken
     func imagePickerController(picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [String : AnyObject]) {
         let selectedPhoto = info[UIImagePickerControllerOriginalImage] as! UIImage
@@ -255,16 +227,3 @@ extension ScanViewController: UIImagePickerControllerDelegate {
         })
     }
 }
-
-
-/*
- // MARK: - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
- // Get the new view controller using segue.destinationViewController.
- // Pass the selected object to the new view controller.
- }
- */
-
-
