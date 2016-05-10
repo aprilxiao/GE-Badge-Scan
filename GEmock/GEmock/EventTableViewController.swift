@@ -1,10 +1,6 @@
 //
 //  EventTableViewController.swift
 //  GEmock
-//
-//  Created by 陈昊 on 4/5/16.
-//  Copyright © 2016 Yushi xiao. All rights reserved.
-//
 
 import UIKit
 import CoreData

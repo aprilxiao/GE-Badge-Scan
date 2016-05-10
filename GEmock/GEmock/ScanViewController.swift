@@ -1,10 +1,6 @@
 //
 //  ScanViewController.swift
 //  GEmock
-//
-//  Created by Yushi Xiao on 4/19/16.
-//  Copyright © 2016 Yushi xiao. All rights reserved.
-//
 
 import UIKit
 import Foundation

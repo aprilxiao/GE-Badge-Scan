@@ -1,10 +1,6 @@
 //
 //  UserDataCell.swift
 //  GEmock
-//
-//  Created by 陈昊 on 16/4/23.
-//  Copyright © 2016年 Yushi xiao. All rights reserved.
-//
 
 import UIKit
 
